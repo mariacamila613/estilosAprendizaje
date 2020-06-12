@@ -1,0 +1,1 @@
+     <label>Resultados: <br><?php echo"Activo: <br>",round((($activo*100)/11));echo"%";?>  <br> <?php echo"Reflexivo: <br>",round((($reflexivo*100)/11));echo"%";?>  <br> <?php echo"Teórico: <br>",round((($teorico*100)/11));echo"%";?>  <br> <?php echo"Pragmático: <br>",round((($o*100)/11));echo"%";?>   </label><br>
