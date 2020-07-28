@@ -8,7 +8,7 @@ error_reporting(0);
 
 
 $sql = "SELECT cedula from login 
-WHERE nombre='$varSeccion'
+WHERE nombre_style='$varSeccion'
 
 ";
 	$ejecucion=pg_query($sql);

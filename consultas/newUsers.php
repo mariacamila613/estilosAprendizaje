@@ -12,6 +12,10 @@ $fechaNacimiento=$_POST["birthday"];
 $usuario=$_POST["user"];
 $contrasenia=$_POST["password"];
 $confirmarContrasenia=$_POST["passwordAgain"];
+$securityQuestion=$_POST["pregunta"];
+$securityAnswer=$_POST["securityAnswer"];
+
+
 $correo=$_POST["email"];
 $fechaActual=(new DateTime("now", new DateTimeZone('America/Lima')))->format('d-m-y, H:i:s');
 $hora = (new DateTime("now", new DateTimeZone('America/Lima')))->format('H:i:s');
@@ -23,14 +27,14 @@ if($contrasenia==$confirmarContrasenia){
 	$passHash = password_hash($contrasenia,  PASSWORD_DEFAULT, [15]);
 
 //Insertar en la base de datos los registros.
-$insertarDatosRegistro=" INSERT INTO usuario (cedula, nombre, fecha_nacimiento, usuario, password, correo, fecha, hora, genero, carrera) VALUES
-('".$documento."', '".$nombreUsuario."', '".$fechaNacimiento."','".$usuario."', '".$passHash."', '".$correo."', '".$fechaActual."', '".$hora."', '".$genero."', '".$carrera."')";
+$insertarDatosRegistro=" INSERT INTO usuario (cedula, nombre, fecha_nacimiento, usuario, password, correo, fecha, hora, genero, carrera, pregunta, respuesta) VALUES
+('".$documento."', '".$nombreUsuario."', '".$fechaNacimiento."','".$usuario."', '".$passHash."', '".$correo."', '".$fechaActual."', '".$hora."', '".$genero."', '".$carrera."', '".$securityQuestion."', '".$securityAnswer."')";
 
 
 // Se ejecuta la consulta que almacena los registros en la base de datos, tabla Usuario.
 $ejecucion=pg_query($insertarDatosRegistro);
 
-//Si la consulta se ejecuta correctamente, se abren 
+// //Si la consulta se ejecuta correctamente, se abren 
 	if(!$ejecucion){
 		echo "Ha ocurrido un error, consulte con el administrador";
 
@@ -40,9 +44,8 @@ $ejecucion=pg_query($insertarDatosRegistro);
 
 
 }else{
-	header("Location: ../vistas/html/registro.php?fallo=true");
-	
-}
+ 	header("Location: ../vistas/html/registro.php?fallo=true");
+ }
 
 
 ?>

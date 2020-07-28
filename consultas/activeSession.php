@@ -4,7 +4,7 @@ echo session_id();
 
 session_start();
 // error_reporting(0);
-$varSeccion=$_SESSION['nombre'];
+$varSeccion=$_SESSION['nombre_style'];
 
 
 

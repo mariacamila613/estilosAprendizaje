@@ -31,7 +31,7 @@ include("nav.php");
 		<form class="formulario"  action="../../consultas/newUsers.php" name="registro" method="post">
 
             <div>
-                &nbsp;<label for="perfil">Carrera</label>
+                <label for="perfil">Carrera</label>
                 <select class="entradas" name="carrera" required>
                     <option selected></option>
                     <?php include("carrera.php");
@@ -53,18 +53,12 @@ include("nav.php");
                 <br><br>
             </div >
 
-            			<div>
+            <div>
 				<label form="name">Nombre: </label>
 				<input type="text" name="name" class="entradas" required>
 			</div>	
 			<!-- Fin de la clase para el nombre del registro -->
 			<br>
-
-
-
-
-
-
 
             <!-- Clase para el documento en el registro de usuario -->
 		
@@ -74,14 +68,6 @@ include("nav.php");
 			</div>	
 			<!-- Fin de la clase para el documento del registro -->
 				<br>
-
-
-
-
-
-
-
-
 
 			<!-- Clase para la fecha de nacimiento en el registro de usuario -->
 			<div>
@@ -97,7 +83,7 @@ include("nav.php");
 				<input type="text" name="user" class="entradas" required >
 			</div>	
 			<!-- Fin de la clase para el nombreUsuario del registro -->
-<br>
+			<br>
 			<!-- Clase para la contraseña en el registro de usuario -->
 			<div class="passwordUsuario" id="passwordUsuario"> 
 				<label form="password" class="etiquetas">Ingrese contraseña: </label>
@@ -111,6 +97,24 @@ include("nav.php");
 				<label form="passwordAgain" class="etiquetas">Confirme contraseña: </label>
 				<input type="password" name="passwordAgain" class="entradas" required >
 			</div>	
+			<!-- Fin de la clase para el confirmar la contraseña del registro -->
+			<br>
+				<div class=""> 
+				<label form="security" class="etiquetas">Pregunta de seguridad: </label>
+				 <select class="entradas" name="pregunta" required>
+                    <option selected></option>
+                    <?php include("passwordQuestion.php");?>
+                </select>
+
+              
+			</div>	
+
+			<div > 
+				<label form="security" class="etiquetas">Respuesta a tu pregunta:</label>
+				<input type="text" name="securityAnswer" class="entradas" required>
+			</div>		
+
+
 			<!-- Fin de la clase para el confirmar la contraseña del registro -->
 			<br>
 			<!-- Clase para el email en el registro de usuario -->
@@ -129,6 +133,10 @@ include("nav.php");
 			    	label{
   display: inline-block;
   width: 80px;
+}
+.a{
+	position: relative;
+	left:1px;
 }
 			    </style>
 

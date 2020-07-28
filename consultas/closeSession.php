@@ -1,8 +1,7 @@
 <?php
 
-    session_start();
-    // $_SESSION['usuario']=null;
-    session_destroy();
-    header("Location: ../vistas/html/index.php");
+ session_start();
+ unset($_SESSION['nombre_style']);
+ header("Location: ../vistas/html/index.php");
 
 ?>

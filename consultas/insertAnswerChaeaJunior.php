@@ -7,8 +7,8 @@ error_reporting(0);
 
 
 
-$sql = "SELECT cedula from login 
-WHERE nombre='$varSeccion'
+$sql = "SELECT cedula from login
+WHERE nombre_style='$varSeccion'
 
 ";
 	$ejecucion=pg_query($sql);
@@ -17,7 +17,7 @@ WHERE nombre='$varSeccion'
 
 
 
-$s = "SELECT nombre from test 
+$s = "SELECT nombre from test
 WHERE id_test=2
 
 ";
@@ -25,11 +25,11 @@ WHERE id_test=2
 	$doc=pg_fetch_array($ej);
 	$test=$doc['nombre'];
 
-$b="SELECT cantidad 
+$b="SELECT cantidad
 FROM resp_usu
 WHERE cedula='$document' AND test='Chaea Junior'
-ORDER BY cantidad desc 
-limit 1 
+ORDER BY cantidad desc
+limit 1
 ";
 $sac=pg_query($b);
 $p=pg_fetch_array($sac);
@@ -51,12 +51,17 @@ for($i=1; $i<=44; $i++){
 	if(isset($_REQUEST[''+$i])){
 			if($_REQUEST[''+$i]=="1" OR $_REQUEST[''+$i]=="0"){
 				$a=$_REQUEST[''+$i];
-			
+
 				$dateTime = (new DateTime("now", new DateTimeZone('America/Lima')))->format('Y-m-d, H:i:s');
 				$hora = (new DateTime("now", new DateTimeZone('America/Lima')))->format('H:i:s');
 				$sqlQ="INSERT INTO resp_usu (cedula, fecha, id_test, hora, valor_respuesta, id_pregunta, test, cantidad)
 				 values ('".$document."', '".$dateTime."' ,2, '".$hora."','".$a."', $i, '".$test."', '".$canti."')  ";
 				$exec=pg_query($sqlQ);
+
+
+
+
+
 
 				if(($i==3 AND $a=='1') OR ($i==6 AND $a=='1') OR ($i==9 AND $a=='1') OR ($i==16 AND $a=='1') OR ($i==17 AND $a=='1') OR ($i==26 AND $a=='1') OR ($i==27 AND $a=='1') OR ($i==29 AND $a=='1') OR ($i==30 AND $a=='1') OR ($i==39 AND $a=='1') or ($i==41 AND $a=='1')){
 				    $totalActivo=$totalActivo+1;
@@ -72,7 +77,7 @@ for($i=1; $i<=44; $i++){
 
                 if(($i==1 AND $a=='1') OR ($i==10 AND $a=='1') OR ($i==15 AND $a=='1') OR ($i==18 AND $a=='1') OR ($i==19 AND $a=='1') OR ($i==21 AND $a=='1') OR ($i==25 AND $a=='1') OR ($i==33 AND $a=='1') OR ($i==34 AND $a=='1') OR ($i==36 AND $a=='1') or ($i==40 AND $a=='1')){
 				    $totalPragmatico=$totalPragmatico+1;
-                }			
+                }
 			}
 }else{
 	$dateTime = (new DateTime("now", new DateTimeZone('America/Lima')))->format('Y-m-d, H:i:s');
@@ -96,11 +101,7 @@ $exe=pg_query($sqlQuery);
 
 
 
-
 echo'<script type="text/javascript">
     alert("Hemos recibido tus respuestas");
    window.location.href="../vistas/html/perfiles.php";
     </script>';
-
-
-

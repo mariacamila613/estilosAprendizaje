@@ -50,7 +50,7 @@ $dateTime = (new DateTime("now", new DateTimeZone('America/Lima')))->format('Y-m
 $hora = (new DateTime("now", new DateTimeZone('America/Lima')))->format('H:i:s');
 
 
-$insertarDatosLogin=" INSERT INTO login (cedula, nombre, fecha, hora) VALUES
+$insertarDatosLogin=" INSERT INTO login (cedula, nombre_style, fecha, hora) VALUES
 ('".$document."', '".$name_user."', '".$dateTime."', '".$hora."')";
 
 
@@ -93,7 +93,7 @@ $extraer=pg_fetch_array($ejecutar_consulta_login);
 if(password_verify($pass_user, $extraer['password'])){
 
 
-    $_SESSION['nombre']=$name_user;
+    $_SESSION['nombre_style']=$name_user;
 	$ok=pg_fetch_array($ejecucion);
 
 	$consulta="SELECT cedula
@@ -111,7 +111,7 @@ if(password_verify($pass_user, $extraer['password'])){
 	$actualiza="
 	UPDATE login
 SET cedula = $b
-WHERE nombre = '$name_user'
+WHERE nombre_style = '$name_user'
 	";
 	$ejec=pg_query($actualiza);
 

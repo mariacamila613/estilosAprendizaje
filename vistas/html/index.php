@@ -29,27 +29,7 @@ include("nav.php");
   <label class="form-check-label">
     
 
-<!--
-            <label for="uname"><b>Usuario: </b></label><br><br>
-            <label for="psw"><b>Contraseña: </b></label>
-
-
-
-
-
-
-
-
-
-
-      
-            <input type="text" placeholder="Nombre de usuario" name="uname" required> <br><br>
-            <input type="password" placeholder="Escriba su contraseña" name="psw" required>
-       
-      </label>
-    <br> <br> 
-    -->
-     <br>    <br>   
+    <br>    <br>   
      <div class="col-md-2 offset-md-2">
     <button type="submit" class="boton">Iniciar Sesión</button>
 </div>
@@ -61,7 +41,9 @@ include("nav.php");
            ?>
 
          <label>¿Aún no estás registrado? <br><a href="registro.php" class="registro">Registrarse</a> </label>
-      <br>    <br>
+      <br> 
+        <label><br><a href="recuperaContraseña.php" class="pass">¿Olvidaste la contraseña?</a> </label>
+    
       <style type="text/css">
             
           .registro{
@@ -70,6 +52,9 @@ include("nav.php");
               position: absolute;
               left: 50px;
               right: 100px;
+          }
+          .pass{
+            color: green;
           }
 
           </style>
