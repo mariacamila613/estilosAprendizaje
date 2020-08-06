@@ -29,8 +29,8 @@
 
 
 
- <a href="chaea.php"><button type="button"  class="btn-sm btn-primary btn-block" style = "line-height: 2em; font-size: 12pt" >Chaea Test </button></a><br>
- <a href="chaeaJunior.php"><button type="button"  class="btn-sm btn-success btn-block" style = "line-height: 2em; font-size: 12pt">Chaea Junior Test </button></a>
+ <a href="chaea.php"><button type="button"  class="btn-sm btn-primary btn-block" style = "line-height: 2em; font-size: 12pt; color: black" >Chaea Test </button></a><br>
+ <a href="chaeaJunior.php"><button type="button"  class="btn-sm btn-success btn-block" style = "line-height: 2em; font-size: 12pt; color: black">Chaea Junior Test </button></a>
 
 </main></div></div></div></body>
      

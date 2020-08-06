@@ -490,14 +490,14 @@ main.home {
 }
 
 .contraste-1 {
-    background-color: red
+      color: #0000D6;
 }
 
 .contraste-2 {
-    background-color: green
+   color: #B300B3;
 }
 
 .contraste-3 {
-    background-color:  #FFC5A8
+    color:  #A20101;
    
 }

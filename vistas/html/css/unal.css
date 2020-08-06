@@ -776,6 +776,7 @@ footer .logos a img {
 	}
 	#unalTop .navigation .btn-group {
 		width: 100%;
+
 	}
 	main.detalle {
 		margin: 0 5% 50px;
@@ -818,3 +819,25 @@ footer .logos a img {
 		display: block; border: 0; -ms-border-radius: none; -o-border-radius: none;  -webkit-box-shadow: none; -moz-box-shadow: none; -o-box-shadow: none; box-shadow: none; position: relative; background-color: transparent; padding: 0;
 	}
 }
+
+.btn{
+	color: black;
+
+}
+
+   .registro{
+            color: green;
+              position: absolute;
+              left: 50px;
+              right: 100px;
+          }
+          .pass{
+            color: green;
+          }
+    input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }

@@ -6,210 +6,78 @@ include("nav.php");
 
 ?>
 
-
-
-  <!-- /content wrapper for padding -->
-
-  <!-- Contenido -->
   <main class="detalle">
     <div class="breadcrumb-class"><span>Aplicación de Estilos de Aprendizaje</span></div>
  <br> <br> <br> <br>
 
 <!----------------------------------------------------->
+<link rel="stylesheet" type="text/css" href="css/unal.css">
 
 
 
-
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Inicio del div más general -->
-	<!--div class="row general"> -->
-	<div class="col-lg-5 offset-lg-4">
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  
+	<div class="col-lg-0 offset-lg-4">
 
 
-		<form class="formulario"  action="../../consultas/newUsers.php" name="registro" method="post">
-
-            <div>
-                <label for="perfil">Carrera</label>
-                <select class="entradas" name="carrera" required>
-                    <option selected></option>
-                    <?php include("carrera.php");
-                    	
-
-                    ?>
+	<form class="formulario"  action="../../consultas/newUsers.php" name="registro" method="post">
+			<label for="perfil">Selecciona tu carrera</label>
+                <select id="perfil" name="carrera" required>
+                    <option>
+                    <?php include("carrera.php");?>
+                    </option>
                 </select>
                 <br><br>
-            </div>
-
-
-
-            <div>
-                <label for="perfil">Género </label>
-                <select class="entradas" name="genero" required>
-                    <option selected></option>
+            <label for="genero">Selecciona tu género </label>
+                <select id="genero" name="genero" required>
+                   <option selected>
                     <?php include("genero.php");?>
+                    </option>
                 </select>
                 <br><br>
-            </div >
-
-            <div>
-				<label form="name">Nombre: </label>
-				<input type="text" name="name" class="entradas" required>
-			</div>	
-			<!-- Fin de la clase para el nombre del registro -->
-			<br>
-
-            <!-- Clase para el documento en el registro de usuario -->
-		
-			<div >
-				<label form="document" class="etiquetas">Documento de identidad: </label>
-				<input type="number" name="document" class="entradas" required>
-			</div>	
-			<!-- Fin de la clase para el documento del registro -->
-				<br>
-
-			<!-- Clase para la fecha de nacimiento en el registro de usuario -->
-			<div>
-				<label form="birthday" class="etiquetas">Fecha Nacimiento: </label>
-				<input type="date" name="birthday" class="entradas" required>
-			</div>	
-			<!-- Fin de la clase para la fecha de nacimiento del registro -->
-
-				<br>
-			<!-- Clase para el nombreUsuario en el registro de usuario -->
-			<div class="nombreUsuario"> 
-				<label  form="user" class="etiquetas">Nombre de Usuario: </label>
-				<input type="text" name="user" class="entradas" required >
-			</div>	
-			<!-- Fin de la clase para el nombreUsuario del registro -->
-			<br>
-			<!-- Clase para la contraseña en el registro de usuario -->
-			<div class="passwordUsuario" id="passwordUsuario"> 
-				<label form="password" class="etiquetas">Ingrese contraseña: </label>
-				<input type="password" name="password" class="entradas" required>
-				
-			</div>	
-			<!-- Fin de la clase para la contraseña del registro -->
-			<br>
-			<!-- Clase para el confirmar contraseña en el registro de usuario -->
-			<div class="passwordUsuarioConfirma"> 
-				<label form="passwordAgain" class="etiquetas">Confirme contraseña: </label>
-				<input type="password" name="passwordAgain" class="entradas" required >
-			</div>	
-			<!-- Fin de la clase para el confirmar la contraseña del registro -->
-			<br>
-				<div class=""> 
-				<label form="security" class="etiquetas">Pregunta de seguridad: </label>
-				 <select class="entradas" name="pregunta" required>
-                    <option selected></option>
+         	<label for="name" form="name">Ingresa tu nombre completo: </label>
+				<input id="name" type="text" name="name" required placeholder="Ejemplo: Pepito Pérez">
+				<br><br>
+			<label for="document" form="document" class="etiquetas">Documento de identidad: </label>
+				<input id="document" type="number" name="document" required placeholder="Ejemplo: 1060******">
+				<br><br>
+			<label for="birthday" class="etiquetas">Fecha de nacimiento: </label>
+				<input id="birthday" type="date" name="birthday" required>
+				<br><br>
+			<label for="user" form="user" class="etiquetas">Nombre de usuario: </label>
+				<input id="user" type="text" name="user" required placeholder="Ejemplo: pepito">
+				<br><br>
+			<label for="password" class="etiquetas">Ingresa una contraseña: </label>
+				<input id="password" type="password" name="password" required placeholder="**********">
+				<br><br>
+			<label for="passwordAgain" class="etiquetas">Confirma la contraseña: </label>
+				<input id="passwordAgain" type="password" name="passwordAgain" required placeholder="**********">
+				<br><br>
+			<label for="security" class="etiquetas">Pregunta de seguridad: </label>
+				 <select id="security" name="pregunta" required>
+                    <option selected>
                     <?php include("passwordQuestion.php");?>
+                    </option>
                 </select>
+                <br><br>
+			<label for="secur" class="etiquetas">Respuesta a tu pregunta:</label>
+				<input id="secur" type="text" name="securityAnswer" required>
+				<br><br>
+			<label for="email" form="email" class="etiquetas">Correo electrónico: </label>
+				<input id="email" type="email" name="email" required>
+            	<br><br>
+		<button type="submit" class="btn btn-success" style="position: relative; left: 25%;">Registarse</button>
+	</form>
 
-              
-			</div>	
-
-			<div > 
-				<label form="security" class="etiquetas">Respuesta a tu pregunta:</label>
-				<input type="text" name="securityAnswer" class="entradas" required>
-			</div>		
-
-
-			<!-- Fin de la clase para el confirmar la contraseña del registro -->
-			<br>
-			<!-- Clase para el email en el registro de usuario -->
-			<div class="correo"> 
-				<label form="email" class="etiquetas">Correo electrónico: </label>
-				<input type="email" name="email" class="entradas" required>
-			</div>	
-			<!-- Fin de la clase para el email del registro -->
-            <br> <br>
-			</u>
-			</b>
-			   <button type="submit" name="a" class="btnA btn-success">Registarse</button>
-
-			    
-			    <style type="text/css">
-			    	label{
-  display: inline-block;
-  width: 80px;
-}
-.a{
-	position: relative;
-	left:1px;
-}
-			    </style>
-
-
-
-
-		
-
-		</form>
-
-	</div>
-	<!-- Fin de la clase general del registro de usuario -->
-	</div>
-	<div class="col-lg-4">
-		
-	</div>
-
-
-
-
-
-<style>
-
-    .entradas {
-        border-radius: 15px;
-        font-size: 8pt;
-        background-color: #def;
-        font-family: Arial;
-    }
-    .btnA{
-        position: absolute;
-        left: 100px;
-        right: 150px;
-
-    }
-
-
-</style>
-<!----------------------------------------------------->
-
-
-	<?php
+<?php
 	if(isset($_GET["fallo"]) && $_GET["fallo"] == 'true')
                 echo "<div style='color:red'>Las contraseñas no son iguales</div>";
-     ?>
+ ?>
 
-
-
-
-  </main>
-
-  <!-- Footer -->
-  <?php
-  include ("foot.php");
-  ?>
+</main>
+<?php
+	include ("foot.php");
+?>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
