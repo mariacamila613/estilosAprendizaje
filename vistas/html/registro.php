@@ -16,7 +16,7 @@ include("nav.php");
 
 
 <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-  
+
 	<div class="col-lg-0 offset-lg-4">
 
 
@@ -54,17 +54,17 @@ include("nav.php");
 				<input id="passwordAgain" type="password" name="passwordAgain" required placeholder="**********">
 				<br><br>
 			<label for="security" class="etiquetas">Pregunta de seguridad: </label>
-				 <select id="security" name="pregunta" required>
-                    <option selected>
+				 <select id="security" name="pregunta" required >
+                    <option selected >
                     <?php include("passwordQuestion.php");?>
                     </option>
                 </select>
                 <br><br>
 			<label for="secur" class="etiquetas">Respuesta a tu pregunta:</label>
-				<input id="secur" type="text" name="securityAnswer" required>
+				<input id="secur" type="text" name="securityAnswer" required placeholder="Pepito Pérez">
 				<br><br>
 			<label for="email" form="email" class="etiquetas">Correo electrónico: </label>
-				<input id="email" type="email" name="email" required>
+				<input id="email" type="email" name="email" required placeholder=ejemplo@unal.edu.co>
             	<br><br>
 		<button type="submit" class="btn btn-success" style="position: relative; left: 25%;">Registarse</button>
 	</form>

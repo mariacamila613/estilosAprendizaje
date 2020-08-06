@@ -18,96 +18,37 @@ include("nav.php");
 <!----------------------------------------------------->
 
 
-<label style="position: absolute; left: 40%; top: 25%;"> Ingresa los datos que usaste al momento de registrarte </label>
-
+<label style="position: relative; left: 30%"> Ingresa los datos que usaste al momento de registrarte </label>
+<div style="position: relative; left: 30%;">
+<br> <br>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Inicio del div más general -->
-	<!--div class="row general"> -->
-	<div class="col-lg-5 offset-lg-4">
-
-
-		<form class="formulario"  action="../../consultas/recuperar.php" name="registro" method="post">
-
-			   <div class="nombreUsuario"> 
-				<label  form="cedula" class="etiquetas">Documento: </label>
-				<input type="number" name="cedula" class="entradas" required >
-			</div>	
-			<!-- Fin de la clase para el nombreUsuario del registro -->
-			<br>
-
-           <div class="nombreUsuario"> 
-				<label  form="user" class="etiquetas">Nombre de Usuario: </label>
-				<input type="text" name="user" class="entradas" required >
-			</div>	
-			<!-- Fin de la clase para el nombreUsuario del registro -->
-			<br>
-			<!-- Clase para la contraseña en el registro de usuario -->
-			<div class="email" id="passwordUsuario"> 
-				<label form="email" class="etiquetas">Correo electrónico: </label>
-				<input type="email" name="email" class="entradas" required>
-				
-			</div>	
-			<br>
-			<div class=""> 
-				<label form="security" class="etiquetas">Pregunta de seguridad: </label>
-				 <select class="entradas" name="pregunta" required>
-                    <option selected></option>
-                    <?php include("passwordQuestion.php");?>
+		<form class="formulario"  action="../../consultas/recuperar.php" name="registro" method="post">			<label for="cedula"  form="cedula" class="etiquetas">Documento: </label>
+			<input id="cedula" type="number" name="cedula" class="entradas" required placeholder="El mismo del registro">
+			<br><br>
+				<label for="name"  form="user" class="etiquetas">Nombre de Usuario: </label>
+				<input id="name" type="text" name="user" class="entradas" required placeholder="El mismo del registro" >
+			<br><br>
+				<label for="email" class="etiquetas">Correo electrónico: </label>
+				<input id="email" type="email" name="email" class="entradas" required placeholder="El mismo del registro">
+			<br><br>
+				<label for="securit" class="etiquetas">Pregunta de seguridad: </label>
+				<select id="securit" class="entradas" name="pregunta" required>
+                <option selected></option>
+					<?php include("passwordQuestion.php");?>
                 </select>
-			</div>	
-			<br>
-
-			<div> 
-				<label form="security" class="etiquetas">Respuesta a tu pregunta:</label>
-				<input type="text" name="securityAnswer" class="entradas" required>
-			</div>		
-			<br>
-			<button type="submit" name="a" class="btnA btn-success">Recuperar contraseña</button>
-
+			<br><br>
+				<label for="security" class="etiquetas">Respuesta a tu pregunta:</label>
+				<input id="security" type="text" name="securityAnswer" class="entradas" required placeholder="La misma del registro">
+			<br><br>
+			<button type="submit"  style="position: relative; left: 10%" class="btn btn-success">Recuperar contraseña</button>
 		</form>
-
-	</div>
-	<!-- Fin de la clase general del registro de usuario -->
-	</div>
-	<div class="col-lg-4">
-		
-	</div>
-
-
-
-
-
-<style>
-
-    .entradas {
-        border-radius: 15px;
-        font-size: 8pt;
-        background-color: #def;
-        font-family: Arial;
-    }
-    .btnA{
-        position: absolute;
-        left: 100px;
-        right: 150px;
-
-    }
-
-
-</style>
-<!----------------------------------------------------->
-
-
+</div>
 	<?php
 	if(isset($_GET["fallo"]) && $_GET["fallo"] == 'true')
                 echo "<div style='color:red'>Las contraseñas no son iguales</div>";
      ?>
-
-
-
-
-  </main>
+	</main>
 
   <!-- Footer -->
   <?php
@@ -116,21 +57,3 @@ include("nav.php");
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
