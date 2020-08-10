@@ -59,7 +59,7 @@ $extraer=pg_fetch_array($ejecutar_consulta_login);
 
 
 
-if(password_verify($pass_user, $extraer['password']) AND $extraer['admin']=='t'){
+if(password_verify($pass_user, $extraer['password']) AND $extraer['admin']=='Sí'){
 
 
     $_SESSION['nombre_style']=$name_user;

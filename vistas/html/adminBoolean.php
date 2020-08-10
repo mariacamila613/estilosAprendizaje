@@ -10,6 +10,11 @@ if ($numReg>0) {
 
     while ($fila=pg_fetch_array($resultado)) {
 
+        if ($fila["admin"]=='t') {
+          echo "Sí";
+        }else {
+          echo "no";
+        }
         echo "<option value=".$fila['admin'].">".$fila['admin']."</option>";
     }
 }else{
