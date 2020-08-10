@@ -7,26 +7,22 @@ include("nav.php");
 
  ?>
 
-
-
-
-
 <!DOCTYPE html>
 <html>
 	<head>
-	
+
 
 	</head>
 <body>
 
 
-	
+
   <main class="detalle">
     <div class="breadcrumb-class">
 
 <h1 class="bienvenida">Hola <?php echo $varSeccion;
-?>,  te damos la bienvenida al perfil Administrador: 
-	
+?>,  te damos la bienvenida al perfil Administrador:
+
  <br>
 
 
@@ -34,31 +30,15 @@ include("nav.php");
     </div>
 
 
-		
+
 	<div>
 
-	
+
 <div class="panel panel-default">
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!--
   <br>   <br>
   <div class="panel-body"></div>
 
@@ -76,6 +56,7 @@ include("nav.php");
 <?php
 	include("estilosBotones.php");
 ?>
+ -->
 
 
 

@@ -99,16 +99,12 @@
          <div class="btn-group">
           <a href="inicioAdmin.php" aria-label="Enlace para ir a inicio" class="btn btn-default">Inicio</a>
         </div>
+         <div class="btn-group">
+          <a href="inicio.php" aria-label="Enlace para ir a inicio" class="btn btn-default">Perfil usuario</a>
+        </div>
         <div class="btn-group">
           <a href="gestionUsuarios.php"   aria-label="Enlace para contactar a nuestro equipo" class="btn btn-default">Gestión de usuarios</a>
         </div>
-        <div class="btn-group">
-          <a href="gestionSolicitudes.php"   aria-label="Enlace para contactar a nuestro equipo" class="btn btn-default">Gestión de solicitudes</a>
-        </div>
-
-
-
-
          <div class="btn-group">
           <a href="actualizarAdmin.php"   aria-label="Enlace para ir actualizar los datos "class="btn btn-default">Actualizar Datos</a>
         </div>
