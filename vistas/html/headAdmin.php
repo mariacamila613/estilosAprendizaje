@@ -1,28 +1,28 @@
  <header id="unalTop">
     <!-- Logo -->
     <div class="logo">
-      <a href="inicio.php">
+
         <!--[if (gte IE 9)|!(IE)]><!-->
         <svg width="93%" height="93%">
           <image
-          xlink:href="images/escudoUnal.svg" 
+          xlink:href="images/escudoUnal.svg"
           width="100%"
           height="100%"
           class="hidden-print"
-          alt="Escudo de la Universidad Nacional de Colombia"/>Inicio 
+          alt="Escudo de la Universidad Nacional de Colombia"/>Inicio
         </svg>
 
         <!--<![endif]-->
         <!--[if lt IE 9]> <img src="images/escudoUnal.png" width="93%" height="auto"
         class="hidden-print"/> <![endif]-->
-     
+
       </a>
     </div>
     <!-- Seal -->
     <div class="seal">
-      
 
-    
+
+
     </div>
 
     <!-- Menú superior -->
@@ -32,20 +32,20 @@
           <!-- perfiles -->
           <div class=" collapse navbar-collapse navbar-default" id="navbarSupportedContent">
             <nav id="profiles">
-              
+
             </nav>
           </div>
           <!-- Redes sociales  -->
           <ul class="socialLinks d-none d-md-block">
-            
+
             <li >
-            <a 
+            <a
             href="https://www.facebook.com/UNColombia"
             target="_blank"
             class="facebook"
             title="Página oficial en Facebook"><div class="red r1">Facebook</div>
             </a>
-            </li> 
+            </li>
 
 
            <li>
@@ -57,8 +57,8 @@
             </a>
             </li>
 
-             
-            
+
+
             <li>
             <a
             href="https://www.youtube.com/channel/UCnE6Zj2llVxcvL5I38B0Ceg"
@@ -66,8 +66,8 @@
             class="youtube"
             title="Canal oficial de Youtube"><div class="red r3">Youtube</div>
             </a>
-            </li> 
-            
+            </li>
+
             <li>
             <a
             href="http://agenciadenoticias.unal.edu.co/nc/sus/type/rss2.html"
@@ -85,7 +85,7 @@
 
     <!-- Menú inferior -->
     <div id="bs-navbar" class="navigation d-none d-md-block">
-  
+
       <!-- Buscador -->
       <div class="buscador" id="buscador">
         <div
@@ -96,27 +96,23 @@
       <!-- Main menu -->
       <div class="navbar-dark mainMenu" id="main_menu_container">
         <!-- Items menú principal -->
-         <div class="btn-group">
-          <a href="inicioAdmin.php" aria-label="Enlace para ir a inicio" class="btn btn-default">Inicio</a>
-        </div>
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
          <div class="btn-group">
           <a href="inicio.php" aria-label="Enlace para ir a inicio" class="btn btn-default">Perfil usuario</a>
         </div>
         <div class="btn-group">
           <a href="gestionUsuarios.php"   aria-label="Enlace para contactar a nuestro equipo" class="btn btn-default">Gestión de usuarios</a>
         </div>
-         <div class="btn-group">
+         <!-- <div class="btn-group">
           <a href="actualizarAdmin.php"   aria-label="Enlace para ir actualizar los datos "class="btn btn-default">Actualizar Datos</a>
-        </div>
+        </div> -->
         <div class="btn-group">
           <a href="reporteAdmin.php"  aria-label="Enlace para ver los reportes" class="btn btn-default">Ver reportes</a>
         </div>
-        
-
          <div class="btn-group">
           <a href="../../consultas/closeSession.php"  aria-label="Enlace para ir a cerrar sesión" class="btn btn-default">Cerrar sesión</a>
         </div>
-        
+
       <div class="btn-group d-none">
         <div
           class="btn btn-default dropdown-toggle"
@@ -139,7 +135,7 @@
     <!--Navbar-->
     <nav class="navbar navbar-light light-blue lighten-4 main_menu">
       <!-- Navbar brand -->
-    
+
 
       <!-- Collapse button -->
       <button
@@ -193,7 +189,7 @@
 
 
   <style type="text/css">
-    
+
 
 .facebook{
   position: absolute;

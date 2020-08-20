@@ -48,7 +48,8 @@ include("nav.php");
 				<input id="user" type="text" name="user" required placeholder="Ejemplo: pepito">
 				<br><br>
 			<label for="password" class="etiquetas">Ingresa una contraseña: </label>
-				<input id="password" type="password" name="password" required placeholder="**********">
+				<input id="password" type="password" name="password" required placeholder="**********"  pattern="(?=.*\d)(?=.*[A-Za-z])(?=.*[@#$%]).{8,}"
+            title="Debe contener al menos un número, una letra, uno de estos símbolos '@', '#', '$' o '%' y al menos 8 caracteres">
 				<br><br>
 			<label for="passwordAgain" class="etiquetas">Confirma la contraseña: </label>
 				<input id="passwordAgain" type="password" name="passwordAgain" required placeholder="**********">

@@ -46,7 +46,7 @@ include("nav.php");
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-4" id="columna1">
+            <div class="col-sm-12" id="columna1">
                 <div class="a">
                     <h2> Reporte general en PDF:</h2><br><br><br>
                     <p> PDF con el consolidado de cada test realizado</p><br><br><br>
@@ -57,14 +57,14 @@ include("nav.php");
 
 
             </div>
-            <div class="col-sm-4">
+            <!-- <div class="col-sm-4">
                 <div class="a">  <h2>Gráficos: </h2><br><br><br>
                     <p>Gráficas para ayudar a mirar el comportamiento de cada test.</p><br><br><br>
                     <a href="../../consultas/moduloReportes/graficas/graficasAdmin.php" class="btn btn-success">Gráficos</a>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 

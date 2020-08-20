@@ -6,13 +6,14 @@ require ("../../consultas/conexionBaseDatos.php");
 include ("head.php");
 
 
-include("nav.php");
+
+  include("nav.php");
 
 ?>
 
 
 
-   
+
   <!-- /content wrapper for padding -->
 
   <!-- Contenido -->
@@ -20,7 +21,7 @@ include("nav.php");
     <div class="breadcrumb-class"><span>Aplicación de Estilos de Aprendizaje</span></div>
  <br> <br>  <br> <br>
 
-	
+
 
 
 				<p id= 'p-inicio' align='justify'>
@@ -36,10 +37,10 @@ include("nav.php");
 					Correo electrónico: <font color="green">ndduqueme@unal.edu.co</font><br>
 					<br>
 					<br>
-					
+
 					<br>
 					<font size="3">
-					
+
 
 				</p>
 
@@ -58,21 +59,3 @@ include("nav.php");
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	

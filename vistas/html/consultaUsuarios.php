@@ -2,62 +2,57 @@
 
 require ("../../consultas/activeSession.php");
 require ("../../consultas/conexionBaseDatos.php");
+require ("../../consultas/consultaUsuariosActuales.php");
 include ("headAdmin.php");
 include("nav.php");
 
 ?>
 
+  <!-- Contenido -->
+  <main class="detalle">
+    <div class="breadcrumb-class"><span>Usuarios registrados</span></div>
+ <br><br><br>
 
 
+<table class="table table-hover">
 
-<!-- /content wrapper for padding -->
-
-<!-- Contenido -->
-<main class="detalle">
-    <div class="breadcrumb-class"><span>Listado de Usuarios</span></div>
-    <br> <br>  <br> <br>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-
- 
+      <tr>
+        <th  class="table-warning" style="text-align: center;">Nombre</th>
+        <th  class="table-warning" style="text-align: center;">Fecha de registro</th>
+        <th  class="table-warning" style="text-align: center;">Administrador</th>
+      </tr>
 <?php
-include ("../../consultas/consultaUsuariosActuales.php");
-?>
+
+while($exe = pg_fetch_array($eje)) {
+  $nombre=$exe['nombre'];
+  $fecha=$exe['fecha'];
+  $admin=$exe['admin'];
+  ?>
+
+        <tr>
+          <td  class="table-Primary" style="text-align: center;"><?php echo $nombre;?></td>
+          <td class="table-Primary" style="text-align: center;"><?php echo $fecha;?></td>
+          <td  class="table-Primary" style="text-align: center;"><?php echo $admin;?></td>
 
 
-    <!----------------------------------------------------->
+
+          <?php
+
+}
+
+
+ ?>
+  </table>
+<!----------------------------------------------------->
 
 
 
-</main>
+  </main>
 
-<!-- Footer -->
-<?php
-include ("foot.php");
-?>
+  <!-- Footer -->
+  <?php
+  include ("foot.php");
+  ?>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

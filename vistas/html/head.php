@@ -1,3 +1,20 @@
+
+<?php
+require ("../../consultas/conexionBaseDatos.php");
+error_reporting(0);
+$name_user=$_SESSION['nombre_style'];
+
+
+$consulta_login="SELECT admin
+                    FROM usuario
+                    WHERE usuario = '$name_user'";
+$ejecutar_consulta_login= pg_query($conexion, $consulta_login) or die("Error en la consulta");
+$extraer=pg_fetch_array($ejecutar_consulta_login);
+
+ ?>
+
+
+
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
 <!--[if IE 7]> <html class="ie7 oldie"> <![endif]-->
@@ -58,20 +75,20 @@
             <img src="images/escudoUnal.png" class="d-block"/>
         </a>
     </div>
-  
+
     <div class="firstMenu">
 
-      
+
         <ul class="socialLinks d-none d-md-block">
-            
+
             <li >
-            <a 
+            <a
             href="https://www.facebook.com/UNColombia"
             target="_blank"
             class="facebook"
             title="Página oficial en Facebook"><div class="red r1">Facebook</div>
             </a>
-            </li> 
+            </li>
 
 
            <li>
@@ -83,8 +100,8 @@
             </a>
             </li>
 
-             
-            
+
+
             <li>
             <a
             href="https://www.youtube.com/channel/UCnE6Zj2llVxcvL5I38B0Ceg"
@@ -92,8 +109,8 @@
             class="youtube"
             title="Canal oficial de Youtube"><div class="red r3">Youtube</div>
             </a>
-            </li> 
-            
+            </li>
+
             <li>
             <a
             href="http://agenciadenoticias.unal.edu.co/nc/sus/type/rss2.html"
@@ -104,17 +121,17 @@
             </li>
 
           </ul>
-      
+
 
     </div>
    <div id="bs-navbar" class="navigation">
-       
-     
+
+
     <div class="mainMenu">
         <div class="container-fluid">
         <div class="row">
         <nav class="navbar navbar-expand-md navbar-dark">
- 
+
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
@@ -122,10 +139,22 @@
 
   <!-- Navbar links -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    
+
+
+
+   </div>
     <ul class="navbar-nav">
      <div class="navbar-dark mainMenu" id="main_menu_container">
         <!-- Items menú principal -->
+
+        <?php if ($extraer['admin']=='Sí') {
+          ?>
+          <div class="btn-group">
+           <a href="inicioAdmin.php"   aria-label="Enlace para ir actualizar los datos "class="btn btn-default">Perfil Administrador</a>
+         </div>
+      <?php
+      }
+        ?>
          <div class="btn-group">
           <a href="inicio.php" aria-label="Enlace para ir a inicio" class="btn btn-default">Inicio</a>
         </div>
@@ -136,33 +165,33 @@
           <a href="reporte.php"  aria-label="Enlace para ver los reportes" class="btn btn-default">Ver reportes</a>
         </div>
          <div class="btn-group">
-          <a href="contacto.php"   aria-label="Enlace para contactar a nuestro equipo" class="btn btn-default">Contacto</a>
+          <!-- <a href="contacto.php"   aria-label="Enlace para contactar a nuestro equipo" class="btn btn-default">Contacto</a>
         </div>
-         <div class="btn-group">
+         <div class="btn-group"> -->
           <a href="../../consultas/closeSession.php"  aria-label="Enlace para ir a cerrar sesión" class="btn btn-default">Cerrar sesión</a>
         </div>
-        
 
 
 
-      
-     
+
+
+
     </ul>
   </div>
 </nav>
-            
+
 
          </div>
         </div>
-         
-       
-        </div> 
+
+
+        </div>
     </div>
 </header>
- 
+
 
   <style type="text/css">
-    
+
 
 .facebook{
   position: absolute;
