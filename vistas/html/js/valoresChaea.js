@@ -29,18 +29,19 @@ $('input[type="radio"]').change(function(){
 
 
 
-  let porAct=((numE*100)/11)+'%';
-  let porRe=((numF*100)/11)+'%';
-  let porTe=((numG*100)/11)+'%';
-  let porPr=((numH*100)/11)+'%';
+  let porAct=((numE*100)/11);
+  let porRe=((numF*100)/11);
+  let porTe=((numG*100)/11);
+  let porPr=((numH*100)/11);
 
-  $(".activo-s").html(porAct);
+  $(".activo-s").html(porAct.toFixed(2)+'%');
 
-  $(".reflexivo-s").html(porRe);
 
-  $(".teorico-s").html(porTe);
+  $(".reflexivo-s").html(porRe.toFixed(2)+'%');
 
-  $(".pragmatico-s").html(porPr);
+  $(".teorico-s").html(porTe.toFixed(2)+'%');
+
+  $(".pragmatico-s").html(porPr.toFixed(2)+'%');
 
 
 });

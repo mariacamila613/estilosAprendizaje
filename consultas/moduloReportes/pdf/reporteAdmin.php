@@ -78,7 +78,9 @@ $pdf=new PDF ();
         $pdf->Cell(20, 6, utf8_decode('Reflexivo'), 1, 0, 'C', 2);
         $pdf->Cell(20, 6, utf8_decode('Teórico'), 1, 0, 'C', 2);
         $pdf->Cell(20, 6, utf8_decode('Pragmático'), 1, 0, 'C', 2);
-         $pdf->SetFont('');
+        $pdf->SetFont('');
+
+
 
 
 
@@ -88,17 +90,19 @@ $pdf=new PDF ();
 
 
 while ($totalRegistros=pg_fetch_array($consolidad) ) {
+
     $totalActivo=(int)$totalRegistros['activo'];
     $totalReflexivo=(int)$totalRegistros['reflexivo'];
     $totalTeorico=(int)$totalRegistros['teorico'];
     $totalPragmatico=(int)$totalRegistros['pragmatico'];
+
     $fecha=$totalRegistros['fecha'];
     $cedula=$totalRegistros['documento'];
     $nombre=$totalRegistros['nombre'];
     $test=$totalRegistros['test'];
 
         $pdf->Ln(5);
-          $pdf->SetFillColor(170, 247, 203);
+        $pdf->SetFillColor(170, 247, 203);
         $pdf->Cell(45,6,utf8_decode($nombre),1,0,'C',1);
         $pdf->Cell(20,6,utf8_decode($test),1,0,'C',1);
         $pdf->Cell(20,6,utf8_decode($fecha),1,0,'C',1);

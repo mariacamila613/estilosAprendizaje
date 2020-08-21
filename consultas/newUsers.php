@@ -27,8 +27,8 @@ if($contrasenia==$confirmarContrasenia){
 	$passHash = password_hash($contrasenia,  PASSWORD_DEFAULT, [15]);
 
 //Insertar en la base de datos los registros.
-$insertarDatosRegistro=" INSERT INTO usuario (cedula, nombre, fecha_nacimiento, usuario, password, correo, fecha, hora, genero, carrera, pregunta, respuesta) VALUES
-('".$documento."', '".$nombreUsuario."', '".$fechaNacimiento."','".$usuario."', '".$passHash."', '".$correo."', '".$fechaActual."', '".$hora."', '".$genero."', '".$carrera."', '".$securityQuestion."', '".$securityAnswer."')";
+$insertarDatosRegistro=" INSERT INTO usuario (cedula, nombre, fecha_nacimiento, usuario, password, correo, fecha, hora, genero, carrera, pregunta, respuesta, admin) VALUES
+('".$documento."', '".$nombreUsuario."', '".$fechaNacimiento."','".$usuario."', '".$passHash."', '".$correo."', '".$fechaActual."', '".$hora."', '".$genero."', '".$carrera."', '".$securityQuestion."', '".$securityAnswer."', 'No')";
 
 
 // Se ejecuta la consulta que almacena los registros en la base de datos, tabla Usuario.
