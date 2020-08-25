@@ -1,3 +1,17 @@
+<?php
+require ("../../conexionBaseDatos.php");
+error_reporting(0);
+$name_user=$_SESSION['nombre_style'];
+
+
+$consulta_login="SELECT admin
+                    FROM usuario
+                    WHERE usuario = '$name_user'";
+$ejecutar_consulta_login= pg_query($conexion, $consulta_login) or die("Error en la consulta");
+$extraer=pg_fetch_array($ejecutar_consulta_login);
+
+ ?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
 <!--[if IE 7]> <html class="ie7 oldie"> <![endif]-->
@@ -52,96 +66,24 @@
 
 <body style="">
 
-<header id="unalTop">
-    <div class="logo">
-        <a href="http://unal.edu.co">
-            <img src="images/escudoUnal.png" class="d-block"/>
-        </a>
-    </div>
-  
-    <div class="firstMenu">
-
-      
-        <ul class="socialLinks d-none d-md-block">
-            
-            <li >
-            <a 
-            href="https://www.facebook.com/UNColombia"
-            target="_blank"
-            class="facebook"
-            title="Página oficial en Facebook"><div class="red r1">Facebook</div>
-            </a>
-            </li> 
 
 
-           <li>
-            <a
-            href="https://twitter.com/UNColombia"
-            target="_blank"
-            class="twitter"
-            title="Cuenta oficial en Twitter"> <br> <div class="red r2">Twitter</div>
-            </a>
-            </li>
 
-             
-            
-            <li>
-            <a
-            href="https://www.youtube.com/channel/UCnE6Zj2llVxcvL5I38B0Ceg"
-            target="_blank"
-            class="youtube"
-            title="Canal oficial de Youtube"><div class="red r3">Youtube</div>
-            </a>
-            </li> 
-            
-            <li>
-            <a
-            href="http://agenciadenoticias.unal.edu.co/nc/sus/type/rss2.html"
-            target="_blank"
-            class="rss"
-            title="Suscripción a canales de información RSS"><div class="red r4">RSS</div>
-            </a>
-            </li>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark"  >
+  <a class="navbar-brand" href="../../../vistas/html/inicio.php" style="left: 10px; position: relative;" >Inicio</a>
 
-          </ul>
-      
+        <?php if ($extraer['admin']=='Sí') {
+          ?>
+  <a class="navbar-brand" href="../../../vistas/html/inicioAdmin.php" style="left: 15px; position: relative;" >Perfil administrador</a>
+   <?php
+      }
+        ?>
+   <a class="navbar-brand" href="../../../vistas/html/actualizar.php" style="left: 20px; position: relative;">Actualizar datos</a>
+    <a class="navbar-brand" href="../../../vistas/html/reporte.php"style="left: 25px; position: relative;" >Reporte</a>
+     <a class="navbar-brand" href="../../../consultas/closeSession.php" style="left: 30px; position: relative;">Cerrar sesión </a>
+</nav> 
 
-    </div>
-   <div id="bs-navbar" class="navigation">
-       
-     
-    <div class="mainMenu">
-        <div class="container-fluid">
-        <div class="row">
-        <nav class="navbar navbar-expand-md navbar-dark">
- 
-  <!-- Toggler/collapsibe Button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <!-- Navbar links -->
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    
-    <ul class="navbar-nav">
-     <div class="navbar-dark mainMenu" id="main_menu_container">
-        <!-- Items menú principal -->
-         <div class="btn-group">
-          <a href="../../../vistas/html/inicio.php" aria-label="Enlace para ir a inicio" class="btn btn-default">Inicio</a>
-        </div>
-         <div class="btn-group">
-          <a href="../../../vistas/html/actualizar.php"   aria-label="Enlace para ir actualizar los datos "class="btn btn-default">Actualizar Datos</a>
-        </div>
-        <div class="btn-group">
-          <a href="../../../vistas/html/reporte.php"  aria-label="Enlace para ver los reportes" class="btn btn-default">Ver reportes</a>
-        </div>
-         <div class="btn-group">
-          <a href="../../../vistas/html/contacto.php"   aria-label="Enlace para contactar a nuestro equipo" class="btn btn-default">Contacto</a>
-        </div>
-         <div class="btn-group">
-          <a href="../../closeSession.php"  aria-label="Enlace para ir a cerrar sesión" class="btn btn-default">Cerrar sesión</a>
-        </div>
-        
 
 
 

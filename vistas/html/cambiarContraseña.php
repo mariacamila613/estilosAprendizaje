@@ -18,7 +18,7 @@ $key=$recuperar['token'];
 
 
 if(password_verify($recuperar['token'], $mensaje)){
-	echo "sí son iguales";
+
 
 ?>
 

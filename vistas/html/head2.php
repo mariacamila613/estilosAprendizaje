@@ -76,31 +76,117 @@ $extraer=pg_fetch_array($ejecutar_consulta_login);
         </a>
     </div>
 
+    <div class="firstMenu">
 
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark"  >
-  <a class="navbar-brand" href="inicio.php" style="left: 10px; position: relative;" >Inicio</a>
+        <ul class="socialLinks d-none d-md-block">
+
+            <li >
+            <a
+            href="https://www.facebook.com/UNColombia"
+            target="_blank"
+            class="facebook"
+            title="Página oficial en Facebook"><div class="red r1">Facebook</div>
+            </a>
+            </li>
+
+
+           <li>
+            <a
+            href="https://twitter.com/UNColombia"
+            target="_blank"
+            class="twitter"
+            title="Cuenta oficial en Twitter"> <br> <div class="red r2">Twitter</div>
+            </a>
+            </li>
+
+
+
+            <li>
+            <a
+            href="https://www.youtube.com/channel/UCnE6Zj2llVxcvL5I38B0Ceg"
+            target="_blank"
+            class="youtube"
+            title="Canal oficial de Youtube"><div class="red r3">Youtube</div>
+            </a>
+            </li>
+
+            <li>
+            <a
+            href="http://agenciadenoticias.unal.edu.co/nc/sus/type/rss2.html"
+            target="_blank"
+            class="rss"
+            title="Suscripción a canales de información RSS"><div class="red r4">RSS</div>
+            </a>
+            </li>
+
+          </ul>
+
+
+    </div>
+   <div id="bs-navbar" class="navigation">
+
+
+    <div class="mainMenu">
+        <div class="container-fluid">
+        <div class="row">
+        <nav class="navbar navbar-expand-md navbar-dark">
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+
+
+   </div>
+    <ul class="navbar-nav">
+     <div class="navbar-dark mainMenu" id="main_menu_container">
+        <!-- Items menú principal -->
 
         <?php if ($extraer['admin']=='Sí') {
           ?>
-  <a class="navbar-brand" href="inicioAdmin.php" style="left: 15px; position: relative;" >Perfil administrador</a>
-   <?php
+          <div class="btn-group">
+           <a href="inicioAdmin.php"   aria-label="Enlace para ir actualizar los datos "class="btn btn-default">Perfil Administrador</a>
+         </div>
+      <?php
       }
         ?>
-   <a class="navbar-brand" href="actualizar.php" style="left: 20px; position: relative;">Actualizar datos</a>
-    <a class="navbar-brand" href="reporte.php"style="left: 25px; position: relative;" >Reporte</a>
-     <a class="navbar-brand" href="../../consultas/closeSession.php" style="left: 30px; position: relative;">Cerrar sesión </a>
-</nav> 
+         <div class="btn-group">
+          <a href="inicio.php" aria-label="Enlace para ir a inicio" class="btn btn-default">Inicio</a>
+        </div>
+         <div class="btn-group">
+          <a href="actualizar.php"   aria-label="Enlace para ir actualizar los datos "class="btn btn-default">Actualizar Datos</a>
+        </div>
+        <div class="btn-group">
+          <a href="reporte.php"  aria-label="Enlace para ver los reportes" class="btn btn-default">Ver reportes</a>
+        </div>
+         <div class="btn-group">
+          <!-- <a href="contacto.php"   aria-label="Enlace para contactar a nuestro equipo" class="btn btn-default">Contacto</a>
+        </div>
+         <div class="btn-group"> -->
+          <a href="../../consultas/closeSession.php"  aria-label="Enlace para ir a cerrar sesión" class="btn btn-default">Cerrar sesión</a>
+        </div>
 
 
 
 
 
 
+    </ul>
+  </div>
+</nav>
 
 
+         </div>
+        </div>
 
 
+        </div>
+    </div>
 </header>
 
 

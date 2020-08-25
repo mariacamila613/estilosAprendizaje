@@ -47,7 +47,8 @@ if(password_verify($recuperar['token'], $mensaje)){
 
 			  <div class="passwordUsuario" id="passwordUsuario"> 
 				<label form="password" class="etiquetas">Ingrese contraseña: </label>
-				<input type="password" name="password" class="entradas" required>
+				<input type="password" name="password" class="entradas" required pattern="(?=.*\d)(?=.*[A-Za-z])(?=.*[@#$%]).{8,}"
+            title="Debe contener al menos un número, una letra, uno de estos símbolos '@', '#', '$' o '%' y al menos 8 caracteres">
 				
 			</div>	
 			<!-- Fin de la clase para la contraseña del registro -->
@@ -55,7 +56,8 @@ if(password_verify($recuperar['token'], $mensaje)){
 			<!-- Clase para el confirmar contraseña en el registro de usuario -->
 			<div class="passwordUsuarioConfirma"> 
 				<label form="passwordAgain" class="etiquetas">Confirme contraseña: </label>
-				<input type="password" name="passwordAgain" class="entradas" required >
+				<input type="password" name="passwordAgain" class="entradas" required pattern="(?=.*\d)(?=.*[A-Za-z])(?=.*[@#$%]).{8,}"
+            title="Debe contener al menos un número, una letra, uno de estos símbolos '@', '#', '$' o '%' y al menos 8 caracteres">
 			</div>	
 				<input name="cedula" type="hidden" value="<?php echo $cedula; ?>">
 			</div>	

@@ -19,10 +19,10 @@ footer.clear{
 }
 
 
-/*.navbar-toggler-icon{
+.navbar-toggler-icon{
 	font-family:'Glyphicons Halflings';
 	content: "\e114";
-}*/
+}
 
 .navbar-toggler {
  position:relative;

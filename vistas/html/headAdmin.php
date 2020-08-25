@@ -1,191 +1,107 @@
- <header id="unalTop">
-    <!-- Logo -->
+
+<?php
+require ("../../consultas/conexionBaseDatos.php");
+error_reporting(0);
+$name_user=$_SESSION['nombre_style'];
+
+
+$consulta_login="SELECT admin
+                    FROM usuario
+                    WHERE usuario = '$name_user'";
+$ejecutar_consulta_login= pg_query($conexion, $consulta_login) or die("Error en la consulta");
+$extraer=pg_fetch_array($ejecutar_consulta_login);
+
+ ?>
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]> <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]> <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]> <html class="ie9 oldie"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!--
+ =============================================================================
+ === PLANTILLA DESARROLLADA POR LA OFICINA DE MEDIOS DIGITALES - UNIMEDIOS ===
+ =============================================================================
+    -->
+
+    <!-- base href="http://subdominio.unal.edu.co/" -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+
+    <meta name="revisit-after" content="1 hour">
+    <meta name="distribution" content="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.5, user-scalable=yes">
+    <meta name="expires" content="1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="all">
+
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/unal.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/base.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/tablet.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/phone.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/small.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/printer.css" media="print">
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css" media="all">
+    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/unal.js" type="text/javascript"></script>
+    <!--[if lt IE 9]><script src="js/html5shiv.js" type="text/javascript"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js" type="text/javascript"></script><![endif]-->
+
+    <script src="js/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="js/jquery.min.js"></script>
+    <title>Aplicación de Estilos de Aprendizaje</title>
+</head>
+
+<body style="">
+
+<header id="unalTop">
     <div class="logo">
-
-        <!--[if (gte IE 9)|!(IE)]><!-->
-        <svg width="93%" height="93%">
-          <image
-          xlink:href="images/escudoUnal.svg"
-          width="100%"
-          height="100%"
-          class="hidden-print"
-          alt="Escudo de la Universidad Nacional de Colombia"/>Inicio
-        </svg>
-
-        <!--<![endif]-->
-        <!--[if lt IE 9]> <img src="images/escudoUnal.png" width="93%" height="auto"
-        class="hidden-print"/> <![endif]-->
-
-      </a>
-    </div>
-    <!-- Seal -->
-    <div class="seal">
-
-
-
+        <a href="http://unal.edu.co">
+            <img src="images/escudoUnal.png" class="d-block"/>
+        </a>
     </div>
 
-    <!-- Menú superior -->
-    <div class="firstMenu d-none d-md-block">
-      <div class="content-fluid">
-        <nav class="navbar navbar-expand-md nav navbar-dark">
-          <!-- perfiles -->
-          <div class=" collapse navbar-collapse navbar-default" id="navbarSupportedContent">
-            <nav id="profiles">
-
-            </nav>
-          </div>
-          <!-- Redes sociales  -->
-          <ul class="socialLinks d-none d-md-block">
-
-            <li >
-            <a
-            href="https://www.facebook.com/UNColombia"
-            target="_blank"
-            class="facebook"
-            title="Página oficial en Facebook"><div class="red r1">Facebook</div>
-            </a>
-            </li>
 
 
-           <li>
-            <a
-            href="https://twitter.com/UNColombia"
-            target="_blank"
-            class="twitter"
-            title="Cuenta oficial en Twitter"> <br> <div class="red r2">Twitter</div>
-            </a>
-            </li>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark"  >
+  <a class="navbar-brand" href="inicioAdmin.php" style="left: 10px; position: relative;" >Inicio</a>
+
+        <?php if ($extraer['admin']=='Sí') {
+          ?>
+  <a class="navbar-brand" href="inicio.php" style="left: 15px; position: relative;" >Perfil usuario</a>
+   <?php
+      }
+        ?>
+   <a class="navbar-brand" href="gestionUsuarios.php" style="left: 20px; position: relative;">Gestión de usuarios</a>
+    <a class="navbar-brand" href="reporteAdmin.php"style="left: 25px; position: relative;" >Reporte</a>
+     <a class="navbar-brand" href="../../consultas/closeSession.php" style="left: 30px; position: relative;">Cerrar sesión </a>
+</nav> 
 
 
 
-            <li>
-            <a
-            href="https://www.youtube.com/channel/UCnE6Zj2llVxcvL5I38B0Ceg"
-            target="_blank"
-            class="youtube"
-            title="Canal oficial de Youtube"><div class="red r3">Youtube</div>
-            </a>
-            </li>
-
-            <li>
-            <a
-            href="http://agenciadenoticias.unal.edu.co/nc/sus/type/rss2.html"
-            target="_blank"
-            class="rss"
-            title="Suscripción a canales de información RSS"><div class="red r4">RSS</div>
-            </a>
-            </li>
-
-          </ul>
-          <!-- idioma -->
-        </nav>
-      </div>
-    </div>
-
-    <!-- Menú inferior -->
-    <div id="bs-navbar" class="navigation d-none d-md-block">
-
-      <!-- Buscador -->
-      <div class="buscador" id="buscador">
-        <div
-        class="gcse-searchbox-only"
-        data-resultsurl="https://unal.edu.co/resultados-de-la-busqueda/"
-        data-newwindow="true"></div>
-      </div>
-      <!-- Main menu -->
-      <div class="navbar-dark mainMenu" id="main_menu_container">
-        <!-- Items menú principal -->
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-         <div class="btn-group">
-          <a href="inicio.php" aria-label="Enlace para ir a inicio" class="btn btn-default">Perfil usuario</a>
-        </div>
-        <div class="btn-group">
-          <a href="gestionUsuarios.php"   aria-label="Enlace para contactar a nuestro equipo" class="btn btn-default">Gestión de usuarios</a>
-        </div>
-         <!-- <div class="btn-group">
-          <a href="actualizarAdmin.php"   aria-label="Enlace para ir actualizar los datos "class="btn btn-default">Actualizar Datos</a>
-        </div> -->
-        <div class="btn-group">
-          <a href="reporteAdmin.php"  aria-label="Enlace para ver los reportes" class="btn btn-default">Ver reportes</a>
-        </div>
-         <div class="btn-group">
-          <a href="../../consultas/closeSession.php"  aria-label="Enlace para ir a cerrar sesión" class="btn btn-default">Cerrar sesión</a>
-        </div>
-
-      <div class="btn-group d-none">
-        <div
-          class="btn btn-default dropdown-toggle"
-          data-toggle="dropdown"
-          id="navbarSupportedContent"
-          data-target="#services">Servicios<span class="caret"></span>
-        </div>
-      </div>
-      <!-- Perfiles -->
-      <div class="btn-group d-none">
-        <div
-          class="btn btn-default dropdown-toggle"
-          data-toggle="dropdown"
-          id="navbarSupportedContent"
-          data-target="#profiles">Perfiles<span class="caret"></span>
-        </div>
-      </div>
-    </div>
-
-    <!--Navbar-->
-    <nav class="navbar navbar-light light-blue lighten-4 main_menu">
-      <!-- Navbar brand -->
 
 
-      <!-- Collapse button -->
-      <button
-        class="navbar-toggler collapsed d-block d-md-none"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbar_content"
-        aria-controls="navbar_content"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-        id="btn_hamburguer">
-        <!-- <span class="navbar-toggler-icon"></span> -->
-      </button>
-
-      <!-- Collapsible content -->
-      <div class="collapse navbar-collapse" id="navbar_content">
-        <!-- subdominio -->
-        <div class="site-url" id="container_subdominio_mobil"></div>
-        <!-- buscador -->
-        <div class="buscador" id="container_buscador_mobil"></div>
-        <!-- main -->
-        <div id="container_mainmenu_mobil"></div>
-        <!-- Sedes -->
-        <div class="btn-group d-block d-md-none hidden-print">
-          <div class="btn btn-default dropdown-toggle" data-toggle="collapse" data-target="#container_sedes_mobil" aria-controls="container_sedes_mobil">Sedes<span class="caret"> </span>
-          </div>
-        </div>
-        <div class="collapse" id="container_sedes_mobil"></div>
-
-        <!-- Servicios -->
-        <div class="btn-group d-block d-md-none hidden-print">
-          <div class="btn btn-default dropdown-toggle" data-toggle="collapse" data-target="#container_servicios_mobil" aria-controls="container_servicios_mobil">Servicios<span class="caret"> </span>
-          </div>
-        </div>
-        <div class="collapse" id="container_servicios_mobil"></div>
 
 
-        <!-- Perfiles -->
-        <div class="btn-group d-block d-md-none hidden-print">
-          <div class="btn btn-default dropdown-toggle" data-toggle="collapse" data-target="#container_profiles_mobil" aria-controls="container_profiles_mobil">Perfiles<span class="caret"> </span>
-          </div>
-        </div>
-        <div class="collapse" id="container_profiles_mobil"></div>
 
-      </div>
-      <!-- Collapsible content -->
 
-    </nav>
 
-  </header>
+</header>
 
 
   <style type="text/css">
