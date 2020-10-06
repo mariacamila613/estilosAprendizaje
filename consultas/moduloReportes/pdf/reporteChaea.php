@@ -4,13 +4,13 @@ require("../../conexionBaseDatos.php");
 require ("../../activeSession.php");
 error_reporting(0);
 
-$sql = "SELECT cedula, nombre, carrera  from usuario
+$sql = "SELECT cedula, nombre_style, carrera  from usuario
 WHERE usuario='$varSeccion'
 ";
 $ejecucion=pg_query($sql);
 $docu=pg_fetch_array($ejecucion);
 $document=$docu['cedula'];
-$nombre=$docu['nombre'];
+$nombre=$docu['nombre_style'];
 $carrera=$docu['carrera'];
 
 

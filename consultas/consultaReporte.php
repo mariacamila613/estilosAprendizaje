@@ -1,13 +1,13 @@
 <?php
 
 
-$sql = "SELECT cedula, nombre  from usuario 
+$sql = "SELECT cedula, nombre_style  from usuario 
 WHERE usuario='$varSeccion'
 ";
 $ejecucion=pg_query($sql);
 $docu=pg_fetch_array($ejecucion);
 $document=$docu['cedula'];
-$nombre=$docu['nombre'];
+$nombre=$docu['nombre_style'];
 
 
 

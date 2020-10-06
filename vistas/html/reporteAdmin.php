@@ -58,11 +58,12 @@ include("nav.php");
 
         <form action="../../consultas/excel/leer.php" method="post"  enctype="multipart/form-data">
           <div class="a">
-            <h2>Filtrar por Excel:</h2><br><br><br>
+            <h2>Filtrar por medio del listado del SIA (Formato en Excel):</h2><br><br><br>
             <p> PDF con el listado de estudiantes de Excel</p><br><br><br>
-            <input  type="file" name="fileName"><br>
-            <button type="submit" href="../../consultas/excel/leer.php" class="btn btn-success">Cargar </button>
+            <input  type="file" name="fileName" required><br>
+            <button  type="submit" href="../../consultas/excel/leer.php" class="btn btn-success">Cargar </button>
         </div>
+   
     </form>
     </div>
             <!-- <div class="col-sm-4">

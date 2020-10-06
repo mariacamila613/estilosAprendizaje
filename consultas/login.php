@@ -10,14 +10,6 @@ $pass_user=$_POST['psw'];
 
 
 
-
-
-
-
-
-
-
-
 $insertar_login="SELECT usuario, cedula
 FROM usuario
 WHERE usuario = '$name_user'
@@ -27,14 +19,6 @@ $ejecutar_insertar_login= pg_query($conexion, $insertar_login) or die("Error en 
 
 
 $sacar=pg_fetch_array($ejecutar_insertar_login);
-
-
-
-
-
-
-
-
 
 $document=$sacar['cedula'];
 $dateTime = (new DateTime("now", new DateTimeZone('America/Lima')))->format('Y-m-d, H:i:s');
