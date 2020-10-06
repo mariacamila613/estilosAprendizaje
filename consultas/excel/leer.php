@@ -40,7 +40,7 @@ if($_FILES['fileName']['name']==""){
 					array_push($arregloDocumentos, $identificacion);
 				}
 				$_SESSION['cedulas']=$arregloDocumentos;
-				header("Location: ../moduloReportes/pdf/prueba.php");
+				header("Location: ../moduloReportes/pdf/filtro.php");
 			}else{
 				// echo "El encabezado es: ",$identificacion;
 				header("Location: ../../vistas/html/reporteAdmin.php");
