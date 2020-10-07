@@ -5,7 +5,7 @@ require ("../../activeSession.php");
 error_reporting(0);
 
 $sql = "SELECT cedula, nombre_style, carrera  from usuario
-WHERE usuario='$varSeccion'
+WHERE nombre_style='$varSeccion'
 ";
 $ejecucion=pg_query($sql);
 $docu=pg_fetch_array($ejecucion);

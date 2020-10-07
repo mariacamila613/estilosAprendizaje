@@ -17,7 +17,6 @@ include("nav.php");
     <div class="breadcrumb-class"><span>Aplicación de Estilos de Aprendizaje</span></div>
     <br> <br>
 
-
     <div>
 
 <?php include ("../../consultas/consultaReporte.php");?>

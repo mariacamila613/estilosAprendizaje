@@ -27,7 +27,7 @@ if($contrasenia==$confirmarContrasenia){
 	$passHash = password_hash($contrasenia,  PASSWORD_DEFAULT, [15]);
 
 //Insertar en la base de datos los registros.
-$insertarDatosRegistro=" INSERT INTO usuario (cedula, nombre, fecha_nacimiento, usuario, password, correo, fecha, hora, genero, carrera, pregunta, respuesta, admin) VALUES
+$insertarDatosRegistro=" INSERT INTO usuario (cedula, nombre_styles, fecha_nacimiento, usuario, password, correo, fecha, hora, genero, carrera, pregunta, respuesta, admin) VALUES
 ('".$documento."', '".$nombreUsuario."', '".$fechaNacimiento."','".$usuario."', '".$passHash."', '".$correo."', '".$fechaActual."', '".$hora."', '".$genero."', '".$carrera."', '".$securityQuestion."', '".$securityAnswer."', 'No')";
 
 
@@ -36,7 +36,7 @@ $ejecucion=pg_query($insertarDatosRegistro);
 
 // //Si la consulta se ejecuta correctamente, se abren 
 	if(!$ejecucion){
-		echo "Ha ocurrido un error, consulte con el administrador";
+		// echo "Ha ocurrido un error, consulte con el administrador";
 
 	}else{
 		header("Location: ../vistas/html/index.php");

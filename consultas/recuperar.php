@@ -9,7 +9,7 @@ $pregunta=$_POST["pregunta"];
 $securityAnswer=$_POST["securityAnswer"];
 
 
-$query="SELECT cedula, nombre, correo, pregunta, respuesta
+$query="SELECT cedula, nombre_style, correo, pregunta, respuesta
 FROM usuario
 WHERE cedula='$cedula'";
 
@@ -18,7 +18,7 @@ $consulta=pg_query($query);
 $desino=$email;
 while($recuperar = pg_fetch_array($consulta)) {
 $documento=$recuperar['cedula'];
-$nombre=$recuperar['nombre'];
+$nombre=$recuperar['nombre_style'];
 $correo=$recuperar['correo'];
 $preguntaSeguridad=$recuperar['pregunta'];
 $respuesta=$recuperar['respuesta'];

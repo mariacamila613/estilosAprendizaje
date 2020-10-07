@@ -7,7 +7,7 @@ error_reporting(0);
 
 
 
-$sql = "SELECT cedula from login 
+$sql = "SELECT cedula from usuario 
 WHERE nombre_style='$varSeccion'
 
 ";

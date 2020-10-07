@@ -1,10 +1,10 @@
 <?php 
 require("../../conexionBaseDatos.php");
 require ("../../activeSession.php");
-//error_reporting(0);
-$sql = "SELECT cedula from login 
+error_reporting(0);
+$sql = "SELECT cedula
+FROM usuario 
 WHERE nombre_style='$varSeccion'
-
 ";
 $ejecucion=pg_query($sql);
 $docu=pg_fetch_array($ejecucion);
@@ -12,14 +12,13 @@ $document=$docu['cedula'];
 
 
 
-$sql="SELECT   fecha, activo, reflexivo,  teorico,  pragmatico
+$sql="SELECT  fecha, activo, reflexivo,  teorico,  pragmatico
 FROM  consolidado
 WHERE documento='$document' AND test='Chaea Junior'
-
 ";
-$result=pg_query($conexion, $sql);
-$valoresY=array();
-$valoresX=array();  
+$result=pg_query($sql);
+// $valoresY=array();
+// $valoresX=array();  
 
 while ($variable=pg_fetch_row($result)) {
 
@@ -31,6 +30,7 @@ while ($variable=pg_fetch_row($result)) {
 }
 
 $datosFecha=json_encode($fecha);
+
 $datosActivo=json_encode($activo);
 $datosReflexivo=json_encode($reflexivo);
 $datosTeorico=json_encode($teorico);

@@ -1,7 +1,7 @@
  <?php
 include ("head.php");
 include("nav.php");
-
+require ("../../consultas/activeSession.php");
 require ("../../consultas/conexionBaseDatos.php");
 
 

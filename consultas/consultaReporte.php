@@ -1,8 +1,10 @@
 <?php
 
 
+
+
 $sql = "SELECT cedula, nombre_style  from usuario 
-WHERE usuario='$varSeccion'
+WHERE nombre_style='$varSeccion'
 ";
 $ejecucion=pg_query($sql);
 $docu=pg_fetch_array($ejecucion);
@@ -12,7 +14,7 @@ $nombre=$docu['nombre_style'];
 
 
 $consulta = "SELECT *  from usuario 
-WHERE usuario='$varSeccion'
+WHERE nombre_style='$varSeccion'
 ";
 $exe=pg_query($consulta);
 $consultaSQL=pg_fetch_array($exe);

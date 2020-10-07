@@ -12,7 +12,7 @@ foreach ($cedulas as $key) {
 
     $consolidado="SELECT *
     FROM consolidado, usuario
-    WHERE usuario.cedula=consolidado.documento  AND consolidado.documento='$key'
+    WHERE usuario.cedula=consolidado.documento AND consolidado.documento='$key'
     ORDER BY consolidado.fecha
     ";
 
@@ -21,7 +21,7 @@ foreach ($cedulas as $key) {
 
     if ($totalRegistros=pg_fetch_array($consolidad) ) {
         
-        $arrayOne=array($totalRegistros['activo'],$totalRegistros['reflexivo'],$totalRegistros['teorico'],$totalRegistros['pragmatico'],$totalRegistros['fecha'],$totalRegistros['documento'],$totalRegistros['nombre'],$totalRegistros['test']);
+        $arrayOne=array($totalRegistros['activo'],$totalRegistros['reflexivo'],$totalRegistros['teorico'],$totalRegistros['pragmatico'],$totalRegistros['fecha'],$totalRegistros['documento'],$totalRegistros['nombre_style'],$totalRegistros['test']);
         
         $arrayAll[]=$arrayOne;
     }

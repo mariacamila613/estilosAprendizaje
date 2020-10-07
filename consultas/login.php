@@ -1,107 +1,107 @@
 <?php
 require ("activeSession.php");
 require("conexionBaseDatos.php");
-
-
-
-$name_user=$_POST['uname'];
+//Recibo por post
+$email_user=$_POST['email'];
 $pass_user=$_POST['psw'];
+// var_dump($email_user);	
 
 
 
-
-$insertar_login="SELECT usuario, cedula
+//Saco la cédula y el usuario
+$insertar_login="SELECT nombre_style, cedula, correo
 FROM usuario
-WHERE usuario = '$name_user'
+WHERE correo = '$email_user'
 ";
-
-$ejecutar_insertar_login= pg_query($conexion, $insertar_login) or die("Error en la consulta");
-
-
+$ejecutar_insertar_login= pg_query($insertar_login);
+//Saco la cédula y el usuario de la tabla Usuario
 $sacar=pg_fetch_array($ejecutar_insertar_login);
 
-$document=$sacar['cedula'];
+//Cédula
+echo $document=$sacar['cedula'];
+// exit();
+//Variables
 $dateTime = (new DateTime("now", new DateTimeZone('America/Lima')))->format('Y-m-d, H:i:s');
 $hora = (new DateTime("now", new DateTimeZone('America/Lima')))->format('H:i:s');
 
+// //Insertar en LOGIN
+$insertarDatosLogin=" INSERT INTO login (cedula, email, fecha, hora) VALUES
+('".$document."', '".$email_user."', '".$dateTime."', '".$hora."')";
 
-$insertarDatosLogin=" INSERT INTO login (cedula, nombre_style, fecha, hora) VALUES
-('".$document."', '".$name_user."', '".$dateTime."', '".$hora."')";
-
-
-// Se ejecuta la consulta que almacena los registros en la base de datos, tabla Usuario.
+// //Ejecuto insertar LOGIN
 $ejecucion=pg_query($insertarDatosLogin);
 
-$consulta_login="SELECT usuario, password, admin
-                    FROM usuario
-                    WHERE usuario = '$name_user'";
+// //Saco los datos de Usuario para validar
+$consulta_login="
+SELECT nombre_style, password, admin
+FROM   usuario
+WHERE  correo='$email_user'";
 
 $ejecutar_consulta_login= pg_query($conexion, $consulta_login) or die("Error en la consulta");
 
-
+// //Consulta
 $extraer=pg_fetch_array($ejecutar_consulta_login);
 
-
-
+$nombre=$extraer['nombre_style'];
+// //Mirar la clave y ADMIN
 if(password_verify($pass_user, $extraer['password']) AND $extraer['admin']=='Sí'){
 
+	$_SESSION['nombre_style']=$nombre;
+	// $ok=pg_fetch_array($ejecucion);
 
-    $_SESSION['nombre_style']=$name_user;
-	$ok=pg_fetch_array($ejecucion);
+	// $consultaCedula="SELECT cedula
+	// FROM usuario
+	// WHERE correo = '$email_user'
+	// ";
 
-	$consulta="SELECT cedula
-	FROM usuario
-	WHERE usuario = '$name_user'
-	";
-
-	$exe=pg_query($consulta);
-	$a=pg_fetch_array($exe);
+	// $exe=pg_query($consultaCedula);
+	// $ced=pg_fetch_array($exe);
 	
 
-	$b=$a['cedula'];
-	
+	// echo $documento=$ced['cedula'];
 
-	$actualiza="
-	UPDATE login
-	SET cedula = $b
-	WHERE nombre_style = '$name_user'
-	";
-	$ejec=pg_query($actualiza);
-
+	// $actualiza="
+	// UPDATE login
+	// SET cedula = $document
+	// WHERE email = '$email_user'
+	// ";
+	// $ejec=pg_query($actualiza);
 
 
 
-			header ("Location:../vistas/html/inicioAdmin.php");
+
+	header ("Location:../vistas/html/inicioAdmin.php");
+
 
 }else{
 	if (password_verify($pass_user, $extraer['password']) ) {
-	
-	$_SESSION['nombre_style']=$name_user;
+
+	$_SESSION['nombre_style']=$nombre;
 	$ok=pg_fetch_array($ejecucion);
 
-	$consulta="SELECT cedula
-	FROM usuario
-	WHERE usuario = '$name_user'
-	";
+		$consulta="SELECT cedula
+		FROM usuario
+		WHERE correo = '$email_user'
+		";
 
-	$exe=pg_query($consulta);
-	$a=pg_fetch_array($exe);
-	
+		$exe=pg_query($consulta);
+		$a=pg_fetch_array($exe);
 
-	$b=$a['cedula'];
-	
 
-	$actualiza="
-	UPDATE login
-	SET cedula = $b
-	WHERE nombre_style = '$name_user'
-	";
-	$ejec=pg_query($actualiza);
+		$b=$a['cedula'];
 
-	header ("Location:../vistas/html/inicio.php");
-}else{
 
-header ("Location:../vistas/html/index.php?fallo=true");
+		$actualiza="
+		UPDATE login
+		SET cedula = '$b'
+		WHERE email = '$email_user'
+		";
+		$ejec=pg_query($actualiza);
+
+		header ("Location:../vistas/html/inicio.php");
+	}else{
+
+		header ("Location:../vistas/html/index.php?fallo=true");
 	}
 	
 }

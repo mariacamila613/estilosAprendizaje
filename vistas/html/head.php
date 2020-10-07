@@ -7,7 +7,7 @@ $name_user=$_SESSION['nombre_style'];
 
 $consulta_login="SELECT admin
                     FROM usuario
-                    WHERE usuario = '$name_user'";
+                    WHERE nombre_style = '$name_user'";
 $ejecutar_consulta_login= pg_query($conexion, $consulta_login) or die("Error en la consulta");
 $extraer=pg_fetch_array($ejecutar_consulta_login);
 

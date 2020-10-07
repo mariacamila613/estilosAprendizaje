@@ -24,7 +24,7 @@ include("nav.php");
 <?php
 
 while($exe = pg_fetch_array($eje)) {
-  $nombre=$exe['nombre'];
+  $nombre=$exe['nombre_style'];
   $fecha=$exe['fecha'];
   $admin=$exe['admin'];
   ?>

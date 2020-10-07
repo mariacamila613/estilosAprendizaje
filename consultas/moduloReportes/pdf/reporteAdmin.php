@@ -46,7 +46,7 @@ $extraer=pg_query($consultaCantidad);
 
 
 
-$consolidado="SELECT activo, reflexivo, teorico, pragmatico, consolidado.fecha, documento, usuario.nombre, test
+$consolidado="SELECT activo, reflexivo, teorico, pragmatico, consolidado.fecha, documento, usuario.nombre_style, test
 FROM consolidado, usuario
 WHERE usuario.cedula=consolidado.documento
 ORDER BY fecha
@@ -71,13 +71,13 @@ $pdf=new PDF ();
         // $pdf->Ln(5);
         // $pdf->Write(5, "Test: Chaea");
         $pdf->Ln(10);
-        $pdf->Cell(45, 6, utf8_decode('Nombre'), 1, 0, 'C', 2);
+        $pdf->Cell(60, 6, utf8_decode('Nombre'), 1, 0, 'C', 2);
         $pdf->Cell(20, 6, utf8_decode('Test'), 1, 0, 'C', 2);
         $pdf->Cell(20, 6, utf8_decode('Fecha'), 1, 0, 'C', 2);
         $pdf->Cell(20, 6, utf8_decode('Cédula'), 1, 0, 'C', 2);
-        $pdf->Cell(20, 6, utf8_decode('Activo'), 1, 0, 'C', 2);
-        $pdf->Cell(20, 6, utf8_decode('Reflexivo'), 1, 0, 'C', 2);
-        $pdf->Cell(20, 6, utf8_decode('Teórico'), 1, 0, 'C', 2);
+        $pdf->Cell(15, 6, utf8_decode('Activo'), 1, 0, 'C', 2);
+        $pdf->Cell(15, 6, utf8_decode('Reflexivo'), 1, 0, 'C', 2);
+        $pdf->Cell(15, 6, utf8_decode('Teórico'), 1, 0, 'C', 2);
         $pdf->Cell(20, 6, utf8_decode('Pragmático'), 1, 0, 'C', 2);
         $pdf->SetFont('');
 
@@ -99,19 +99,19 @@ while ($totalRegistros=pg_fetch_array($consolidad) ) {
 
     $fecha=$totalRegistros['fecha'];
     $cedula=$totalRegistros['documento'];
-    $nombre=$totalRegistros['nombre'];
+    $nombre=$totalRegistros['nombre_style'];
     $test=$totalRegistros['test'];
 
         $pdf->Ln(5);
         $pdf->SetFillColor(170, 247, 203);
-        $pdf->Cell(45,6,utf8_decode($nombre),1,0,'C',1);
+        $pdf->Cell(60,6,utf8_decode($nombre),1,0,'C',1);
         $pdf->Cell(20,6,utf8_decode($test),1,0,'C',1);
         
         $pdf->Cell(20,6,utf8_decode($fecha),1,0,'C',1);
         $pdf->Cell(20,6,utf8_decode($cedula),1,0,'C',1);
-        $pdf->Cell(20,6,utf8_decode("$totalActivo%"),1,0,'C',1);
-        $pdf->Cell(20,6,utf8_decode("$totalReflexivo%"),1,0,'C',1);
-        $pdf->Cell(20,6,utf8_decode("$totalTeorico%"),1,0,'C',1);
+        $pdf->Cell(15,6,utf8_decode("$totalActivo%"),1,0,'C',1);
+        $pdf->Cell(15,6,utf8_decode("$totalReflexivo%"),1,0,'C',1);
+        $pdf->Cell(15,6,utf8_decode("$totalTeorico%"),1,0,'C',1);
         $pdf->Cell(20,6,utf8_decode("$totalPragmatico%"),1,0,'C',1);
 
 }
