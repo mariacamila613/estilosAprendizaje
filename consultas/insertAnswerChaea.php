@@ -104,7 +104,5 @@ $sqlQuery="INSERT INTO consolidado (documento, fecha, hora, test, activo, reflex
 $exe=pg_query($sqlQuery);
 
 
-echo'<script type="text/javascript">
-    alert("Hemos recibido tus respuestas");
-    window.location.href="../vistas/html/perfiles.php";
-    </script>';
+
+header("Location: ../vistas/html/perfiles.php");

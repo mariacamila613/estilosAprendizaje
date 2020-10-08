@@ -1,7 +1,7 @@
 <?php
-require("clasePdf.php");
-require("../../conexionBaseDatos.php");
-require ("../../activeSession.php");
+require("../../consultas/moduloReportes/pdf/clasePdf.php");
+require("../../consultas/conexionBaseDatos.php");
+require ("../../consultas/activeSession.php");
 error_reporting(0);
 $sql = "SELECT cedula, nombre_style, carrera  from usuario
 WHERE nombre_style='$varSeccion'

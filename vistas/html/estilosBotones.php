@@ -27,10 +27,10 @@
           <div class="col-sm-4">
         
 
+<a href="chaea.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Test Chaea</a>
+<a href="chaeaJunior.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Test Chaea Junior</a>
 
 
- <a href="chaea.php"><button type="button"  class="btn-sm btn-primary btn-block" style = "line-height: 2em; font-size: 12pt; color: black" >Chaea Test </button></a><br>
- <a href="chaeaJunior.php"><button type="button"  class="btn-sm btn-success btn-block" style = "line-height: 2em; font-size: 12pt; color: black">Chaea Junior Test </button></a>
 
 </main></div></div></div></body>
      

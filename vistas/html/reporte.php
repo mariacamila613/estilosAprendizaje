@@ -36,19 +36,16 @@ include("nav.php");
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-4" id="columna1">
-                <div class="a">
+            <div class="col-sm-6" id="columna1">
+                <div class="a" style="background-color: #e9f7cd">
                     <h2> Detalles:</h2><br><br><br>
                     <p> Acá podrás ver más en detalle tus resultados.</p><br><br><br>
-                    <a  href="reporteGeneral.php" class="btn btn-success">Detalles</a>
+                    <a  href="reporteGeneral.php"  class="btn btn-success">Detalles</a>
                 </div>
             </div>
-            <div class="col-sm-4">
-
-
-            </div>
-            <div class="col-sm-4">
-                <div class="a">  <h2>Gráficos: </h2><br><br><br>
+   
+            <div class="col-sm-6">
+                <div class="a" style="background-color: #e9f7cd">  <h2>Gráficos: </h2><br><br><br>
                     <p>Consulta tus resultados en un gráfico.</p><br><br><br>
                     <a href="../../consultas/moduloReportes/graficas/graficas.php" class="btn btn-success">Gráficos</a>
                 </div>
@@ -67,9 +64,11 @@ include("nav.php");
 
             margin: 1rem;
             padding: 1rem;
-            border: 2px solid #ccc;
+            /*border: 1px solid #ccc;*/
             /* IMPORTANTE */
             text-align: center;
+            border:1px solid;"
+            background-color: red;
         }
     </style>
 

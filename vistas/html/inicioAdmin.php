@@ -6,6 +6,18 @@ include ("headAdmin.php");
 include("nav.php");
 
  ?>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<!-- <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"> -->
+  
+</script>
+
+<script type="text/javascript" >
+
+Swal.fire({
+  icon: 'success',
+  title: 'Bienvenido al perfil de Administrador!'
+})
+    </script>
 
 <!DOCTYPE html>
 <html>
@@ -35,28 +47,6 @@ include("nav.php");
 
 
 <div class="panel panel-default">
-
-
-
-<!--
-  <br>   <br>
-  <div class="panel-body"></div>
-
-  <ul class="list-group">
-
-    <li class="list-group-item" style = "line-height: 2em; font-size: 12pt">Este cuestionario ha sido diseñado para identificar su estilo preferido de aprendizaje. No es un test de inteligencia, ni de personalidad.</li>
-    <li class="list-group-item" style = "line-height: 2em; font-size: 12pt">No hay límite de tiempo para contestar al Cuestionario. No le ocupará más de 15 minutos.</li>
-    <li class="list-group-item" style = "line-height: 2em; font-size: 12pt">No hay respuestas correctas o erróneas y el resultado será útil en la medida que sea sincero/a en sus respuestas.</li>
-
-  </ul>
-</div>
-</div>
-<br>
-
-<?php
-	include("estilosBotones.php");
-?>
- -->
 
 
 

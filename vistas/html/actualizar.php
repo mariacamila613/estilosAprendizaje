@@ -36,7 +36,7 @@ include("nav.php");
       <div class="container">
           <div class="row">
               <div class="col-sm-4" id="columna1">
-                  <div class="a">
+                  <div class="a" style="background-color: #e9f7cd">
                   <h2> Datos personales: </h2><br><br><br>
                   <p> Acá podrás actualizar tu fecha de nacimiento o tu nombre.</p><br><br><br>
                   <a href="datosPersonales.php" class="btn btn-success">Personales</a>
@@ -47,14 +47,13 @@ include("nav.php");
 
               </div>
               <div class="col-sm-4">
-                  <div class="a">  <h2>Datos para el acceso: </h2><br><br><br>
+                  <div class="a" style="background-color: #e9f7cd">  <h2>Datos para el acceso: </h2><br><br><br>
                   <p>Acá podrás actualizar la contraseña y tu correo electrónico.</p><br><br><br>
                   <a  href="datosAcceso.php" class="btn btn-success">Datos de acceso</a>
                   </div>
               </div>
           </div>
       </div>
-
 
 
       </p>

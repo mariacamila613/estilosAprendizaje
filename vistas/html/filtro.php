@@ -1,8 +1,8 @@
 <?php
-
-include("../../conexionBaseDatos.php");
-include("../../activeSession.php");
-include("clasePdf.php");
+require("../../consultas/moduloReportes/pdf/clasePdf.php");
+require("../../consultas/conexionBaseDatos.php");
+require ("../../consultas/activeSession.php");
+error_reporting(0);
 
 $arrayAll= array();
 

@@ -65,12 +65,7 @@ include("nav.php");
             <label><i><b> Test: </b></i><?php echo $testChaea;?> </label><br>
             <label><i><b>Último test: </b></i>  <?php echo $dia; ?> </label><br>
           <b><i><?php echo"Activo: <br></b></i>",$aVacio?>  <br><b><i> <?php echo"Reflexivo: <br></b></i>",$bVacio?>  <br><b><i> <?php echo"Teórico: <br></b></i>",$cVacio?>  <br><b><i> <?php echo"Pragmático: <br></b></i>",$dVacio?>   </label><br>
-
-
-
-
-
-            <br> <a href="../../consultas/moduloReportes/pdf/ReporteChaea.php" class="btn btn-success" target="_blank">Resultados históricos en PDF</a >
+            <br> <a href="reporteChaea.php" class="btn btn-success" target="_blank">Resultados históricos en PDF</a >
 
 
         </div>
@@ -80,7 +75,7 @@ include("nav.php");
             <label><i><b> Test: </b></i><?php echo $testChaeaJunior;?> </label><br>
             <label><i><b>Último test: </b></i>  <?php echo $diaJunior;?> </label><br>
             <i><b><?php echo"Activo: <br></i></b>",$actVacio?>  <br><i><b> <?php echo"Reflexivo: <br></i></b>",$reVacio?>  <br><i><b> <?php echo"Teórico: <br></i></b>",$teoVacio?>  <br><i><b> <?php echo"Pragmático: <br></i></b>",$praVacio?>   </label><br>
-            <br> <a href="../../consultas/moduloReportes/pdf/ReporteJunior.php" class="btn btn-success" target="_blank">Resultados históricos en PDF</a >
+            <br> <a href="reporteJunior.php" class="btn btn-success" target="_blank">Resultados históricos en PDF</a >
         </div>
     </div>
 

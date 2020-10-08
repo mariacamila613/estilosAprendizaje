@@ -1,12 +1,11 @@
- <?php
-include ("head.php");
-include("nav.php");
+<?php
 require ("../../consultas/activeSession.php");
 require ("../../consultas/conexionBaseDatos.php");
-
+include ("head.php");
+include("nav.php");
 
  ?>
-
+  <link rel="stylesheet" type="text/css" href="css/unal.css">
 
 
  <!-- /content wrapper for padding -->

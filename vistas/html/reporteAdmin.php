@@ -48,20 +48,20 @@ include("nav.php");
 <div class="container">
     <div class="row">
         <div class="col-sm-6" id="columna1">
-            <div class="a">
+            <div class="a" style="background-color: #e9f7cd">
                 <h2> Reporte general en PDF:</h2><br><br><br>
                 <p> PDF con el consolidado de cada test realizado</p><br><br><br>
-                <a  href="../../consultas/moduloReportes/pdf/reporteAdmin.php" class="btn btn-success">Descargar</a>
+                <a  href="reportePDFAdmin.php" target="_blank" class="btn btn-success">Descargar</a>
             </div>
         </div>
         <div class="col-sm-6">
 
         <form action="../../consultas/excel/leer.php" method="post"  enctype="multipart/form-data">
-          <div class="a">
+          <div class="a" style="background-color: #e9f7cd">
             <h2>Filtrar por medio del listado del SIA (Formato en Excel):</h2><br><br><br>
             <p> PDF con el listado de estudiantes de Excel</p><br><br><br>
             <input  type="file" name="fileName" required><br>
-            <button  type="submit" href="../../consultas/excel/leer.php" class="btn btn-success">Cargar </button>
+            <button  type="submit" target="_blank" href="../../consultas/excel/leer.php" class="btn btn-success">Cargar </button>
         </div>
    
     </form>
@@ -81,16 +81,18 @@ include("nav.php");
 </div>
 
 
-<style>
-    .a {
+ <style>
+        .a {
 
-        margin: 1rem;
-        padding: 1rem;
-        border: 2px solid #ccc;
-        /* IMPORTANTE */
-        text-align: center;
-    }
-</style>
+            margin: 1rem;
+            padding: 1rem;
+            /*border: 1px solid #ccc;*/
+            /* IMPORTANTE */
+            text-align: center;
+            border:1px solid;"
+            background-color: red;
+        }
+    </style>
 
 
 
