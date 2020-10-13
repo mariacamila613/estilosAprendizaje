@@ -14,8 +14,9 @@ include("nav.php");
 
   <!-- Contenido -->
   <main class="detalle">
+     <br> <br>  <br> <br>
+
     <div class="breadcrumb-class"><span>Gestión de Usuarios</span></div>
- <br> <br>  <br> <br>
 
 
  <div class="container">

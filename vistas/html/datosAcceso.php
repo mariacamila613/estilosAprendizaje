@@ -23,7 +23,8 @@ include("nav.php");
 	<!--div class="row general"> -->
 	<div class="col-lg-5 offset-lg-4">
 		<div class="segundaClase" -->
-
+       <h2 style="text-align: center;">Actualiza tus datos para el acceso</h2>
+  <br><br> 
 		<form class="formulario"  action="../../consultas/moduloActualizar/updateDatesUsersAccess.php" name="actualizar" method="post">
 
 				<label for="pass" form="password" class="etiquetas">Ingrese la nueva contraseña: </label>
@@ -37,7 +38,7 @@ include("nav.php");
 				<input id="email" type="email" name="email" class="entradas" required placeholder="ejemplo@unal.edu.co">
         <br> <br> <br>
 
-      <button type="submit"   class="btn btn-success" >Actualizar datos</button>
+      <button type="submit" style="position: relative; left: 20%"  class="btn btn-success" >Actualizar datos</button>
 		</form>
 
 

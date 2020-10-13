@@ -64,7 +64,7 @@ $extraer=pg_fetch_array($ejecutar_consulta_login);
 
 <style type="text/css">
 a:hover {
-  background-color: blue;
+  background-color: #82c9f3;
 }
 
   .facebook{

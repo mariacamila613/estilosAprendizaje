@@ -116,8 +116,8 @@ require("../../consultas/conexionBaseDatos.php");
           <legend>
       <label>Distingo claramente lo bueno de lo malo, lo que está bien y lo que está mal. </label> </td>
 
-    <td><input type="radio" ut id="check_11" name="2" value="1" required  > Sí</td>
-    <td><input type="radio" ut id="check_6" name="2" value="0"  > No </td>
+    <td><input type="radio" ut id="check_11" name="2" value="1" required> Sí</td>
+    <td><input type="radio" ut id="check_6" name="2" value="0"> No </td>
 
 </tr>
 
@@ -266,11 +266,9 @@ require("../../consultas/conexionBaseDatos.php");
 <tr>
   <th scope="row">15</th>
   <td><fieldset>
-          <legend><label>En una discusión me gusta decir claramente lo que pienso.     </label> </td>
-
+          <legend><label>En una discusión me gusta decir claramente lo que pienso. </label> </td>
     <td><input type="radio" ut id="check_10" name="15" value="1" required> Sí</td>
     <td><input type="radio" ut id="check_8" name="15" value="0"> No </td>
-
 </tr>
     </tr>
 
@@ -278,8 +276,8 @@ require("../../consultas/conexionBaseDatos.php");
                        </tbody>
                       </table>
                   </div>
-                <button class="btn btn-success nextBtn btn-lg pull-right btn-un" type="button" id="next1" >Siguiente</button>
-             <button class="btn btn-success backBtn btn-lg pull-right btn-un" type="button" id="next-1" >Atrás</button>
+                <button class="btn btn-success nextBtn btn-lg pull-right btn-un" type="button" id="next1" style="position: absolute;left: 33%">Siguiente</button>
+             <button class="btn btn-success backBtn btn-lg pull-right btn-un" type="button" id="next-1"style="position: absolute;left: 60%" >Atrás</button>
             </div>
         </div>
     </div>
@@ -502,8 +500,8 @@ require("../../consultas/conexionBaseDatos.php");
 
                 </table>
 
-                <button class="btn btn-success nextBtn btn-lg pull-right  btn-un" type="button" id="nexti2" >Siguiente</button>
-                <button class="btn btn-success backBtn btn-lg pull-right btn-un" type="button" id="next-1" >Atrás</button>
+                <button class="btn btn-success nextBtn btn-lg pull-right  btn-un" type="button" id="nexti2"style="position: absolute;left: 33%" >Siguiente</button>
+                <button class="btn btn-success backBtn btn-lg pull-right btn-un" type="button" id="next-1" style="position: absolute;left: 60%" >Atrás</button>
             </div>
         </div>
     </div>
@@ -726,8 +724,8 @@ require("../../consultas/conexionBaseDatos.php");
 
                 </table>
 
-                <button class="btn btn-success nextBtn btn-lg pull-right  btn-un" type="button" id="" >Siguiente</button>
-                <button class="btn btn-success backBtn btn-lg pull-right btn-un" type="button" id="next-1" >Atrás</button>
+                <button class="btn btn-success nextBtn btn-lg pull-right  btn-un" type="button" id="" style="position: absolute;left: 33%" >Siguiente</button>
+                <button class="btn btn-success backBtn btn-lg pull-right btn-un" type="button" id="next-1" style="position: absolute;left: 60%" >Atrás</button>
             </div>
         </div>
     </div>

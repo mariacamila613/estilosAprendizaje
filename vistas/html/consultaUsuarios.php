@@ -10,8 +10,9 @@ include("nav.php");
 
   <!-- Contenido -->
   <main class="detalle">
+     <br><br><br>
     <div class="breadcrumb-class"><span>Usuarios registrados</span></div>
- <br><br><br>
+
 
 
 <table class="table table-hover">

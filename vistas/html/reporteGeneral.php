@@ -1,19 +1,14 @@
 <?php
-
 require ("../../consultas/activeSession.php");
 require ("../../consultas/conexionBaseDatos.php");
 error_reporting(0);
 include ("head.php");
 include("nav.php");
-
 ?>
 
-
-
-<!-- /content wrapper for padding -->
-
-<!-- Contenido -->
 <main class="detalle">
+    <br>
+    <br>
     <div class="breadcrumb-class"><span>Aplicación de Estilos de Aprendizaje</span></div>
     <br> <br>
 
@@ -90,29 +85,9 @@ include("nav.php");
     </body>
 </main>
 
-
-
-
-
-
-
-
-
-    <!-- Inicio del div más general -->
-
     </div>
 
 </div>
-
-
-
-
-
-    <!----------------------------------------------------->
-
-
-
-
 
 </main>
 

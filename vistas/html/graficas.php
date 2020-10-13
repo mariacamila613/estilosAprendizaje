@@ -1,7 +1,7 @@
 <?php
 
-require ("../../activeSession.php");
-require ("../../conexionBaseDatos.php");
+require ("../../consultas/activeSession.php");
+require ("../../consultas/conexionBaseDatos.php");
 include("head.php");
 include("nav.php");
 error_reporting(0);
@@ -102,5 +102,5 @@ error_reporting(0);
 </script>
 </main></head></html>
 <?php
-include("../../../vistas/html/foot.php");
+include("foot.php");
 ?>

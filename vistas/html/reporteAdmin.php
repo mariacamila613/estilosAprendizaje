@@ -16,6 +16,7 @@ include("nav.php");
 </head>
 <body>
 
+ <br> <br>  <br> <br>
 
 
   <main class="detalle">
@@ -48,7 +49,7 @@ include("nav.php");
 <div class="container">
     <div class="row">
         <div class="col-sm-6" id="columna1">
-            <div class="a" style="background-color: #e9f7cd">
+            <div class="a" style="background-color: #e9f7cd; height: 265px">
                 <h2> Reporte general en PDF:</h2><br><br><br>
                 <p> PDF con el consolidado de cada test realizado</p><br><br><br>
                 <a  href="reportePDFAdmin.php" target="_blank" class="btn btn-success">Descargar</a>
@@ -61,7 +62,7 @@ include("nav.php");
             <h2>Filtrar por medio del listado del SIA (Formato en Excel):</h2><br><br><br>
             <p> PDF con el listado de estudiantes de Excel</p><br><br><br>
             <input  type="file" name="fileName" required><br>
-            <button  type="submit" target="_blank" href="../../consultas/excel/leer.php" class="btn btn-success">Cargar </button>
+            <button  type="submit" target="_blank" href="../../consultas/excel/leer.php" class="btn btn-success">Filtrar </button>
         </div>
    
     </form>

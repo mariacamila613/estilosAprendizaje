@@ -1,4 +1,4 @@
-<footer class="clear container-fluid" style="margin-top: 0px;">
+<footer class="clear container-fluid" style="margin-top: 0px; background-color: #272727">
     <div class="row">
       <nav class="col-lg-3 col-md-3 col-sm-4 col-6 gobiernoLinea">
           <a href="http://www.legal.unal.edu.co" target="_top">Régimen Legal</a>

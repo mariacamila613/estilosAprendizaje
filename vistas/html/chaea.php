@@ -12,6 +12,8 @@ include("nav.php");
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <!-- Contenido -->
   <main class="detalle">
+  	<br>
+  	<br>
     <div class="breadcrumb-class"><span>Aplicación de Estilos de Aprendizaje</span></div>
  <br> 
 

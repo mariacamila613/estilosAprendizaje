@@ -47,7 +47,7 @@ include("nav.php");
             <div class="col-sm-6">
                 <div class="a" style="background-color: #e9f7cd">  <h2>Gráficos: </h2><br><br><br>
                     <p>Consulta tus resultados en un gráfico.</p><br><br><br>
-                    <a href="../../consultas/moduloReportes/graficas/graficas.php" class="btn btn-success">Gráficos</a>
+                    <a href="graficas.php" class="btn btn-success">Gráficos</a>
                 </div>
             </div>
         </div>

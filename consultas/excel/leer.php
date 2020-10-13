@@ -7,7 +7,7 @@ error_reporting(0);
 
 
 if($_FILES['fileName']['name']==""){
-		header("Location: ../../../vistas/html/reporteAdmin.php");
+		header("Location: ../../vistas/html/reporteAdmin.php");
 }else{
 	$nombre=$_FILES['fileName']['name'];
 	$guardado=$_FILES['fileName']['tmp_name'];
@@ -43,10 +43,10 @@ if($_FILES['fileName']['name']==""){
 				header("Location: ../../vistas/html/filtro.php");
 			}else{
 				// echo "El encabezado es: ",$identificacion;
-				header("Location: ../../../../vistas/html/reporteAdmin.php");
+				header("Location: ../../vistas/html/reporteAdmin.php");
 			}
 	}else{
-			header("Location: ../../../../vistas/html/reporteAdmin.php");
+			header("Location: ../../vistas/html/reporteAdmin.php");
 	}
 
 }
