@@ -1,5 +1,5 @@
 <?php
-
+ 
 require ("../../consultas/activeSession.php");
 require ("../../consultas/conexionBaseDatos.php");
 //require ("../../consultas/moduloReportes/reporte.php");
@@ -26,14 +26,12 @@ include("nav.php");
 
     <!-- Inicio del div más general -->
     <!--div class="row general"> -->
-    <div class="col-lg-6 offset-lg-4">
-        <h1>Resultados</h1>
-
-        <br><br><br>
+    <div class="col-md-4 offset-md-4"><center> <h2> Resultados </h2></center><br><br><br></div>
+    
 
 
 
-    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-sm-6" id="columna1">

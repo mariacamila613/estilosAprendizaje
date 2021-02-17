@@ -7,12 +7,13 @@ include("conexionBaseDatos.php");
 $nombreUsuario=$_POST["name"];
 $documento=$_POST["document"];
 $genero=$_POST["genero"];
-$carrera=$_POST["carrera"];
+$carrera=(int)$_POST["carrera"];
 $fechaNacimiento=$_POST["birthday"];
 $usuario=$_POST["user"];
 $contrasenia=$_POST["password"];
 $confirmarContrasenia=$_POST["passwordAgain"];
-$securityQuestion=$_POST["pregunta"];
+$securityQuestion=(int)$_POST["pregunta"];
+
 $securityAnswer=$_POST["securityAnswer"];
 
 
@@ -28,7 +29,7 @@ if($contrasenia==$confirmarContrasenia){
 
 //Insertar en la base de datos los registros.
 $insertarDatosRegistro=" INSERT INTO usuario (cedula, nombre_style, fecha_nacimiento, usuario, password, correo, fecha, hora, genero, carrera, pregunta, respuesta, admin) VALUES
-('".$documento."', '".$nombreUsuario."', '".$fechaNacimiento."','".$usuario."', '".$passHash."', '".$correo."', '".$fechaActual."', '".$hora."', '".$genero."', '".$carrera."', '".$securityQuestion."', '".$securityAnswer."', 'No')";
+('".$documento."', '".$nombreUsuario."', '".$fechaNacimiento."','".$usuario."', '".$passHash."', '".$correo."', '".$fechaActual."', '".$hora."', '".$genero."', ".$carrera.", ".$securityQuestion.", '".$securityAnswer."', 'No')";
 
 
 // Se ejecuta la consulta que almacena los registros en la base de datos, tabla Usuario.

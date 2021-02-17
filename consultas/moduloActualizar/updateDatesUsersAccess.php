@@ -18,7 +18,7 @@ $passHash = password_hash($contrasenia,  PASSWORD_DEFAULT, [15]);
 
 $actualizarDatos="UPDATE usuario
 SET password='$passHash', correo='$correo'
-WHERE usuario='$varSeccion'
+WHERE nombre_style='$varSeccion'
 ";
 
 

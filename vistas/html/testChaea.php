@@ -76,12 +76,13 @@ require("../../consultas/conexionBaseDatos.php");
                     <size=18>
                         <p style = "18">
                     <div class="form-group" style = "line-height: 2em; font-size: 12pt">
-                        <li>Este cuestionario ha sido diseñado para identificar su Estilo preferido de Aprendizaje.</li>
-                        <li>No es un test de inteligencia, ni de personalidad.</li>
-                        <li>No hay límite de tiempo para contestar al cuestionario.</li>
-                        <li>No le ocupará más de 15 minutos.</li>
+                        <p>El cuestionario cuenta con 80 preguntas, que le servirán para identificar su estilo de aprendizaje, activo, reflexivo, pragmático y teórico, cada uno de estos ítems corresponden a uno de dichos estilos. En este cuestionario se deben seguir algunas instrucciones para dar respuesta y que su resultado sea veraz y de utilidad. Dichos pasos a seguir son: </p>
+                        <li>Este cuestionario ha sido diseñado para identificar su Estilo preferido de Aprendizaje. No es un test de inteligencia, ni de personalidad</li>
+                        <li>No hay límite de tiempo para contestar al Cuestionario. No le ocupará; más de 15 minutos.</li>
                         <li>No hay respuestas correctas o erróneas. Será útil en la medida que sea sincero/a en sus respuestas.</li>
-                        <li>Por favor conteste a todos los ítems, el cuestionario es anónimo.</li>
+                        <li>Si está más de acuerdo que en desacuerdo con el ítem seleccione 'Más (+)'. Si, por el contrario, está más en desacuerdo que de acuerdo, seleccione 'Menos (-)'.</li>
+                        <li>Por favor conteste a todos los ítems.</li>
+                        <li>El cuestionario es anónimo.</li>
                     </p>
                 </div>
                 </div>
@@ -1290,24 +1291,24 @@ require("../../consultas/conexionBaseDatos.php");
     <br> <br> <br>
     <div class="row setup-content" id="step-8">
 
-        <br> <br> <br> <br>
-        <div class="col-md-5 offset-md-5"> <h3> RESULTADOS DEL TEST</h3></div>
+    <br> <br> <br> <br>
+    <div class="col-md-4 offset-md-4"><center> <h4> ¿Está seguro que desea continuar? </h4></center></div>
 
-        <table class="table table-striped table-hover ">
-
-
-
-
-            <thead>
-            <tr>
-
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
+                <table class="table table-striped table-hover ">
 
 
 
+
+                        <thead>
+                        <tr>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+
+
+<!-- 
                 <div class="col-md-2 offset-md-4">
             <tr>
                 <td style="text-align:center; border: black 5px;width: 5%;">
@@ -1340,12 +1341,12 @@ require("../../consultas/conexionBaseDatos.php");
         <td class="pragmatico-si" style="text-align:center;"></td>
 
 
-    </tr>
+    </tr> -->
     </table>
 
-    <script type="text/javascript" src="js/valoresChaea.js">
+  <!--   <script type="text/javascript" src="js/valoresChaea.js">
 
-    </script>
+    </script> -->
 
 
 
@@ -1355,9 +1356,9 @@ require("../../consultas/conexionBaseDatos.php");
 
     <div class="col-md-2 offset-md-4">
         <div style="text-align: center;">
-            <div class="d-flex justify-content-center">
-            <button style="position: absolute: left:30%" class="btn btn-success nextBtn btn-lg pull-right  btn-un"  type="submit" >Finalizar</button>
-            <button style="position: absolute: left:4    0%"  class="btn btn-success backBtn btn-lg pull-right btn-un" type="button" id="next-1" >Atrás</button>
+            <div class="d-flex center-content-center">
+            <button class="btn btn-success nextBtn btn-lg pull-right  btn-un"  type="submit" style="position: absolute;right: -10%; ">Finalizar</button>
+                <button class="btn btn-success backBtn btn-lg pull-right btn-un" type="button" id="next-1" style="position: absolute;right: -60%; " >Atrás</button>
             </div>
         </div>
     </div>

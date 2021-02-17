@@ -44,9 +44,12 @@ Swal.fire({
 
   <ul class="list-group" style="background-color: red;">
  
-    <li class="list-group-item" style = "line-height: 2em; font-size: 12pt;" id="li" >Este cuestionario ha sido diseñado para identificar su estilo preferido de aprendizaje. No es un test de inteligencia, ni de personalidad.</li>
-    <li class="list-group-item" style = "line-height: 2em; font-size: 12pt" id="li">No hay límite de tiempo para contestar al Cuestionario. No le ocupará más de 15 minutos.</li>
-    <li class="list-group-item" style = "line-height: 2em; font-size: 12pt; " id="li">No hay respuestas correctas o erróneas y el resultado será útil en la medida que sea sincero/a en sus respuestas.</li>
+    <li class="list-group-item" style = "line-height: 2em; font-size: 12pt;" id="li" >• Estos cuestionarios han sido diseñados para identificar su estilo preferido de aprendizaje. No son test de inteligencia, ni de personalidad.</li>
+    <li class="list-group-item" style = "line-height: 2em; font-size: 12pt" id="li">• No hay límite de tiempo para contestar al Cuestionario. No le ocupará más de 15 minutos.</li>
+    <li class="list-group-item" style = "line-height: 2em; font-size: 12pt; " id="li">• No hay respuestas correctas o erróneas y el resultado será útil en la medida que sea sincero/a en sus respuestas.</li>
+    <li class="list-group-item" style = "line-height: 2em; font-size: 12pt; " id="li">• Al final de cada test podrá visualizar la descripción detallada de los diferentes Estilos de Aprendizaje y el resultado de su estilo predominante.</li>
+    <li class="list-group-item" style = "line-height: 2em; font-size: 12pt; " id="li">• <b>Una vez finalizado el test, encontrará las respectivas graficas y reportes de los resultados.</b></li>
+
 
   </ul>
 </div>

@@ -1,4 +1,4 @@
-<?php 
+<?php  
 require("../../consultas/conexionBaseDatos.php");
 require ("../../consultas/activeSession.php");
 error_reporting(0);
@@ -13,7 +13,7 @@ $document=$docu['cedula'];
 
 
 $sql="SELECT  fecha, activo, reflexivo,  teorico,  pragmatico
-FROM  consolidado
+FROM  consolidado_chaea_chaea_junior
 WHERE documento='$document' AND test='Chaea Junior'
 ";
 $result=pg_query($sql);
@@ -124,7 +124,7 @@ var layout = {
 
 };
 
-
+ 
 
 var data = [activo, reflexivo, teorico, pragmatico];
 

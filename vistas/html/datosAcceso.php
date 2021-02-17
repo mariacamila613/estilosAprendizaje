@@ -4,7 +4,7 @@ require ("../../consultas/activeSession.php");
 require ("../../consultas/conexionBaseDatos.php");
 include ("head.php");
 include("nav.php");
-
+ 
 ?>
   <link rel="stylesheet" type="text/css" href="../vistas/css/style.css">
 

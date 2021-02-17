@@ -2,15 +2,15 @@
 
 require ("../../consultas/conexionBaseDatos.php");
 
-$query="SELECT carrera FROM programa_curricular";
+$query="SELECT nombre_carrera, codigo_carrera FROM programa_curricular";
 
-$resultado=pg_query($conexion, $query) or die("Error".pg_last_error());
+$resultado=pg_query($conexion, $query);
 $numReg=pg_num_rows($resultado);
 if ($numReg>0) {
 
     while ($fila=pg_fetch_array($resultado)) {
 
-        echo "<option value=".$fila['carrera'].">".$fila['carrera']."</option>";
+        echo "<option value=".$fila['codigo_carrera'].">".$fila['nombre_carrera']."</option>";
     }
 }else{
     echo "No hay datos en la base de datos";

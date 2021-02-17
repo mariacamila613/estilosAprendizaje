@@ -11,6 +11,7 @@ $nombreCompleto=$_POST["nombre"];
 $fechaNacimiento=$_POST["birthday"];
 
 
+
 if($contrasenia==$confirmarContrasenia){
 //encriptación de la contraseña
 
@@ -18,8 +19,8 @@ $passHash = password_hash($contrasenia,  PASSWORD_DEFAULT, [15]);
 }
 
 $actualizarDatos="UPDATE usuario
-SET  nombre='$nombreCompleto',  fecha_nacimiento='$fechaNacimiento'
-WHERE usuario='$varSeccion'
+SET  nombre_style='$nombreCompleto',  fecha_nacimiento='$fechaNacimiento'
+WHERE nombre_style='$varSeccion'
 ";
 
 

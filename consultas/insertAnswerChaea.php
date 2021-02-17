@@ -99,7 +99,7 @@ $totalRefle=(($totalReflexivo*100)/20);
 $totalTeor=(($totalTeorico*100)/20);
 
 
-$sqlQuery="INSERT INTO consolidado (documento, fecha, hora, test, activo, reflexivo, teorico, pragmatico)
+$sqlQuery="INSERT INTO consolidado_chaea_chaea_junior (documento, fecha, hora, test, activo, reflexivo, teorico, pragmatico)
                 values ('".$document."','".$dateTime."','".$hora."','Chaea','".$totalAct."','".$totalRefle."','".$totalTeor."','".$totalPragma."')";
 $exe=pg_query($sqlQuery);
 

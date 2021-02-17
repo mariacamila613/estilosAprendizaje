@@ -31,9 +31,9 @@ include("nav.php");
 			¿Esta persona tendrá el perfil de administrador?
 		</label>
 			<select style="width: 160px;" class="formu-control" id="admin" name="admin" required>
-				<option selected></option>
-				<?php include("adminBoolean.php");
-				?>
+				<option> </option>
+				<option>Sí</option>
+				<option>No</option>
 			</select>
 			<br><br>
 			<div class="name">
@@ -45,8 +45,9 @@ include("nav.php");
 			<br>
 			<label  for="perfil"  class="etiquetas"> Seleccione su género </label>
 			<select style="width: 160px;" class="etiquetas" id="perfil" name="genero" required>
-				<option selected></option>
-				<?php include("genero.php");?>
+				<option> </option>
+				<option>Masculino</option>
+				<option>Femenino</option>
 			</select>
 			<br><br>
 			<!-- Clase para el documento en el registro de usuario -->
@@ -60,8 +61,10 @@ include("nav.php");
 
 			<label for="carrera"  class="etiquetas"> Seleccione su carrera </label>
 			<select style="width: 160px;"  class="etiquetas" name="carrera" id="carrera" required>
-				<option selected></option>
-				<?php include("carrera.php");?>
+				<option selected >
+					<?php include("carrera.php");?>
+				</option>
+			</select>
 			</select>
 			<br><br>
 

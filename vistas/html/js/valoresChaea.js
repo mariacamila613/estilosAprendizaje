@@ -1,9 +1,8 @@
-
 $('input[type="radio"]').change(function(){
   /* TEST CHAEA */
   let numA = $('#check_1:checked').length;
   let numB = $('#check_2:checked').length;
-   let numC = $('#check_3:checked').length;
+  let numC = $('#check_3:checked').length;
   let numD = $('#check_4:checked').length;
 
 

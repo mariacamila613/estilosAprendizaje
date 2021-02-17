@@ -95,7 +95,7 @@ $totalAct=(($totalActivo*100)/11);
 $totalRefle=(($totalReflexivo*100)/11);
 $totalTeor=(($totalTeorico*100)/11);
 
-$sqlQuery="INSERT INTO consolidado (documento, fecha, hora, test, activo, reflexivo, teorico, pragmatico)
+$sqlQuery="INSERT INTO consolidado_chaea_chaea_junior (documento, fecha, hora, test, activo, reflexivo, teorico, pragmatico)
                 values ('".$document."','".$dateTime."','".$hora."','Chaea Junior','".$totalAct."','".$totalRefle."','".$totalTeor."','".$totalPragma."')";
 $exe=pg_query($sqlQuery);
 

@@ -4,7 +4,7 @@ require ("../../consultas/conexionBaseDatos.php");
 include ("head.php");
 include("nav.php");
 ?>
-
+ 
 <main class="detalle">
   <br>
   <br>

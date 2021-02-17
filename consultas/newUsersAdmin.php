@@ -19,7 +19,7 @@ $correo=$_POST["email"];
 $fechaActual=(new DateTime("now", new DateTimeZone('America/Lima')))->format('d-m-y, H:i:s');
 $hora = (new DateTime("now", new DateTimeZone('America/Lima')))->format('H:i:s');
 
-
+ 
 if($contrasenia==$confirmarContrasenia){
 //encriptación de la contraseña
 

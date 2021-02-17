@@ -2,7 +2,7 @@
 require("../../consultas/conexionBaseDatos.php");
 require ("../../consultas/activeSession.php");
 error_reporting(0);
-
+ 
 $sql = "SELECT cedula from usuario 
 WHERE nombre_style='$varSeccion'
 
@@ -14,7 +14,7 @@ $document=$docu['cedula'];
 
 
 $sql="SELECT   fecha, activo, reflexivo,  teorico,  pragmatico
-FROM  consolidado
+FROM  consolidado_chaea_chaea_junior
 WHERE documento='$document' AND test='Chaea'
 
 ";

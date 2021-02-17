@@ -77,18 +77,87 @@ error_reporting(0);
                               <div class="col-sm-6">
                                 <div id="cargaBarrasChaea"></div>
                             </div>
-
-
-
-
-
-
-
-
-
-
-
     </div>
+     </div>
+      </div>
+       </div>
+        </div>
+         </div>
+
+
+<br>
+ <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-primary">
+                    <div class="panel panel-heading">
+                       <div class="titulo">GRÁFICAS DEL TEST FELDER</div>
+                    </div>
+                    <div class="panel panel-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div id="cargalinealFelder"></div>
+                            </div>
+                              <div class="col-sm-6">
+                                <div id="cargaBarrasFelder"></div>
+                            </div>
+    </div>
+     </div>
+      </div>
+       </div>
+        </div>
+         </div>         
+
+
+
+<br>
+ <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-primary">
+                    <div class="panel panel-heading">
+                       <div class="titulo">GRÁFICAS DEL TEST VARK</div>
+                    </div>
+                    <div class="panel panel-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div id="cargalinealVark"></div>
+                            </div>
+                              <div class="col-sm-6">
+                                <div id="cargaBarrasVark"></div>
+                            </div>
+    </div>
+     </div>
+      </div>
+       </div>
+        </div>
+         </div>
+
+
+ <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-primary">
+                    <div class="panel panel-heading">
+                       <div class="titulo">GRÁFICAS DEL TEST FELDER-VARK</div>
+                    </div>
+                    <div class="panel panel-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div id="cargalinealFelderVark"></div>
+                            </div>
+                              <div class="col-sm-6">
+                                <div id="cargaBarrasFelderVark"></div>
+                            </div>
+    </div>
+     </div>
+      </div>
+       </div>
+        </div>
+         </div>
+
+
+
 </body>
 </html>
 
@@ -97,7 +166,18 @@ error_reporting(0);
         $('#cargaLineal').load('linealJunior.php');
         $('#cargaBarras').load('barrasJunior.php');
         $('#cargaBarrasChaea').load('barrasChaea.php');
-         $('#cargalinealChaea').load('linealChaea.php');
+        $('#cargalinealChaea').load('linealChaea.php');
+
+
+        $('#cargaBarrasFelder').load('barrasFelder.php');
+        $('#cargalinealFelder').load('linealFelder.php');
+
+        $('#cargaBarrasVark').load('barrasVark.php');
+        $('#cargalinealVark').load('linealVark.php');
+
+        $('#cargaBarrasFelderVark').load('barrasFelderVark.php');
+        $('#cargalinealFelderVark').load('linealFelderVark.php');
+
     });
 </script>
 </main></head></html>

@@ -1,5 +1,5 @@
 <?php 
-
+ 
 require("../../consultas/conexionBaseDatos.php");
 require ("../../consultas/activeSession.php");
 error_reporting(0);
@@ -15,7 +15,7 @@ WHERE nombre_style='$varSeccion'
 
 
 $query="SELECT   fecha, activo, reflexivo,  teorico,  pragmatico
-FROM  consolidado
+FROM  consolidado_chaea_chaea_junior
 WHERE documento='$document' AND test='Chaea'";
 $exe=pg_query($query);
 
@@ -112,7 +112,7 @@ datosPragmatico=crearCadenaBarras('<?php echo $datosPragmatico ?>');
 		 text: datosReflexivo.map(String),
 		 textposition: 'auto',  
 
-		 name: 'Activo',
+		 name: 'Reflexivo',
 		type: 'bar',
   text: datosReflexivo.map(String),
   textposition: 'auto',

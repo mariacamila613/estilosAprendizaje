@@ -24,16 +24,17 @@ include("nav.php");
 		<form class="formulario"  action="../../consultas/newUsers.php" name="registro" method="post">
 			<label for="perfil" class="etiquetas">Selecciona tu carrera</label>
 			<select id="perfil" style="width: 200px;" name="carrera" required>
-				<option>
+				<option selected >
 					<?php include("carrera.php");?>
 				</option>
+	
 			</select>
 			<br><br>
 			<label class="etiquetas" for="genero">Selecciona tu género </label>
 			<select style="width: 200px;" id="genero" name="genero" required>
-				<option selected>
-					<?php include("genero.php");?>
-				</option>
+				<option> </option>
+				<option>Masculino</option>
+				<option>Femenino</option>
 			</select>
 			<br><br>
 			<label class="etiquetas" for="name" form="name">Ingresa tu nombre completo: </label>

@@ -12,6 +12,4 @@ if($varSeccion== null || $varSeccion==''){
 
 }
 
-
-
 ?>
